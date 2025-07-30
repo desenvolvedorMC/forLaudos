@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forLaudos</title>
+  <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+  <style>
+    @font-face { 
+      font-family:"Ruda-Regular", sans-serif; 
+      src: url("Ruda-Regular");
+    }
+
+    body {
+      margin: 0;
+      background-color: #f4f8fb;
+      color: #333;
+      text-align: justify;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      background-color: #0c4c8a;
+      padding: 40px;
+      text-align: center;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      width: 250px;
+      height: 320px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      width: 30%;
+      height: 8px;
+      background-color: #0c4c8a;
+      top: 0;
+      left: 0;
+      border-top-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      color: #0c4c8a;
+    }
+
+    .card p {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 90%;
+      }
+    }
+    
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>forLaudos</h1>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Microscopia de GRAM</h2>
+      <p>Acesse a lista completa de exames disponíveis e informações sobre preparo prévio.</p>
+      <img src="bacterias.png" height="200px" width="200px" alt="bactérias">
+    </div>
+
+    <div class="card">
+      <h2>Microscopia de ZIEHL</h2>
+      <p>Consulte seus laudos e resultados diretamente online com segurança.</p>
+      <img src="mycobac.png" height="200px" width="200px" alt="mycobactérias">
+    </div>
+
+    <div class="card">
+      <h2>Micológico Direto</h2>
+      <p>Marque seus exames de forma rápida e prática, escolhendo data e horário.</p>
+      <img src="fungos.png" height="200px" width="200px" alt="fungos">
+    </div>
+
+    <div class="card">
+      <h2>Urina Tipo 1</h2>
+      <p>Veja a lista atualizada dos convênios aceitos pelo nosso laboratório.</p>
+      <img src="urina.png" height="200px" width="200px" alt="urina">
+    </div>
+
+    <div class="card">
+      <h2>Espermograma</h2>
+      <p>Fale com nossa equipe para tirar dúvidas ou resolver questões técnicas.</p>
+      <img src="esperma.png" height="200px" width="200px" alt="esperma">
+    </div>
+
+    <div class="card">
+      <h2>Parasitologia
+      <p>Conheça a missão, visão e estrutura do Laboratório Clínico Vida.</p>
+      <img src="fezes.png" height="200px" width="200px" alt="fezes">
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Desenvolvedor MC
+  </footer>
+
+</body>
+</html>
