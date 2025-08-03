@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>forLaudos</title>
-  <link rel="shortcut icon" href="iconeBGcinzaMENOR.png" type="image/x-icon"> 
+  <link rel="shortcut icon" href="iconeBGcinza.png" type="image/x-icon"> 
 </head>
 <body>
 <style>
@@ -19,7 +19,7 @@
       background-color: #777777;
       padding: 10px;
       margin: 10px;
-      text-align: left;
+      display: flex; justify-content: space-between; align-items: center;
       color: white;
       position: sticky;
       top: 0;
@@ -31,6 +31,12 @@
     img { box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
       border-radius: 12px;}
 
+    nav { padding: 30px;} 
+
+    nav > a { text-decoration: none; font-weight: bold; color: #ffffff; }
+    
+    nav > a:hover { color: #00FFF7; }
+
     h1 {
       margin: 0;
       font-size: 0.95rem;
@@ -40,7 +46,7 @@
       background-color: #777777;
       color: #ffffff;
       box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.6);}
-
+    
     .color1 {color: #00FFF7;}
     .color2 {color: #ffffff;}
 
@@ -105,6 +111,11 @@
 
   <header>
   <img src="iconeBGcinza.png" height="100px" width="100px" alt="ícone">
+  <nav>
+    <a href="#">nav1</a>
+    <a href="#">nav2</a>
+    <a href="#">nav3</a>
+</nav>
   </header>
 
   <main>
@@ -177,7 +188,3 @@
 
 </body>
 </html>
-
-
-
-
