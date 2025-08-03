@@ -15,27 +15,77 @@
       color: #333;
       font-family: Arial, Helvetica, sans-serif;}
 
-    header {
+   header {
       background-color: #777777;
       padding: 10px;
       margin: 10px;
-      display: flex; justify-content: space-between; align-items: center;
-      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       position: sticky;
       top: 0;
       z-index: 1000;
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 12px;
-      box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.6);}
+      box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.6);
+    }
 
-    img { box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
-      border-radius: 12px;}
+    header img {
+      height: 100px;
+      width: 100px;
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+    }
 
-    nav { padding: 30px;} 
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
 
-    nav > a { text-decoration: none; font-weight: bold; color: #ffffff; }
-    
-    nav > a:hover { color: #00FFF7; }
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    nav a:hover {
+      color: #00FFF7;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: #777777;
+        position: absolute;
+        top: 100%;
+        right: 10px;
+        padding: 10px;
+        border-radius: 8px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
 
     h1 {
       margin: 0;
@@ -45,17 +95,17 @@
       text-align: right;
       background-color: #777777;
       color: #ffffff;
-      box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.6);}
+      box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.6); }
     
-    .color1 {color: #00FFF7;}
-    .color2 {color: #ffffff;}
+    .color1 { color: #00FFF7; }
+    .color2 { color: #ffffff; }
 
     main {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       padding: 40px 20px;
-      gap: 20px;}
+      gap: 20px; }
 
     .card {
       background-color: white;
@@ -67,7 +117,7 @@
       margin: 20px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
-      text-align: center;}
+      text-align: center; }
 
     .card::before {
       content: '';
@@ -78,32 +128,36 @@
       top: 0;
       right: 0;
       border-top-left-radius: 0px;
-      border-top-right-radius: 10px;}
+      border-top-right-radius: 10px; }
 
     .card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);}
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); }
 
     .card h2 {
       font-size: 1.2rem;
       margin-top: 20px;
-      color: #0d0d0d;}
+      color: #0d0d0d; }
 
     .card p {
       margin-top: 10px;
       font-size: 0.95rem;
       line-height: 1.4;
-      color: #0d0d0d;}
+      color: #0d0d0d; }
+
+     body img { box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+      border-radius: 12px;} 
 
     footer {
       text-align: center;
       padding: 10px;
-      font-size: 0.9rem;}
+      font-size: 0.9rem; }
 
-    #email { color: #777777;}
-    #politica { color: #ffffff;}
-    #links {color: #0d0d0d;}
+    #email { color: #777777; }
+    #politica { color: #ffffff; }
+    #links {color: #0d0d0d; }
     @media (max-width: 600px) {.card {width: 90%;}}
+
 
   </style>
 
@@ -111,12 +165,23 @@
 
   <header>
   <img src="iconeBGcinza.png" height="100px" width="100px" alt="ícone">
-  <nav>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav id="navMenu">
     <a href="#">nav1</a>
     <a href="#">nav2</a>
     <a href="#">nav3</a>
-</nav>
+  </nav>
   </header>
+
+  <script> /* ainda nao funciona, faz parte do javaScript, manter ate resolver o menu recolhivel */
+  function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");}
+  </script>
 
   <main>
     <div class="card">
