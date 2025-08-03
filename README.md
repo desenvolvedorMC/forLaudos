@@ -4,5 +4,5 @@ azul eletrico #00FFF7
 cinza claro #EBEBEB 
 branco #ffffff 
 preto #0d0d0d 
-bronze #777777 
+cinza #777777 
 FONTE: RUDA e ROBOTO
