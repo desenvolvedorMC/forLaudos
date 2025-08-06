@@ -5,4 +5,4 @@ cinza claro #EBEBEB
 branco #ffffff 
 preto #0d0d0d 
 cinza #777777 
-FONTE: RUDA e ROBOTO
+FONTE: RUDA
