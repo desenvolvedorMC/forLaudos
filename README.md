@@ -1,8 +1,9 @@
 CORES para o forLaudos:
-vermelho cherry #F20039 
-azul eletrico #00FFF7 
-cinza claro #EBEBEB 
-branco #ffffff 
-preto #0d0d0d 
-cinza #777777 
+#F20039 vermelho cherry
+#00FFF7 azul eletrico
+#EBEBEB cinza claro
+#ffffff branco
+#0d0d0d preto
+#777777 cinza
+#5e6e6e7e cinza transparente
 FONTE: RUDA
