@@ -19,39 +19,51 @@
       color: #333;
       }
 
-    header {
-      background-color: #5e6e6e7e;
-      padding: 7px;
-      margin: 10px;
-      margin-top: 4px;
-      margin-bottom: -22px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom-left-radius: 12px;
-      border-bottom-right-radius: 12px;
-      box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.6);}
+header {
+  background-color: #5e6e6e7e;
+  padding: 7px 20px; /* um pouco mais de espaço lateral */
+  margin: 10px;
+  margin-top: 4px;
+  margin-bottom: -22px;
 
-    header img {
-      height: 100px;
-      width: 100px;
-      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
-      border-radius: 12px;}
+  display: flex;
+  align-items: center;
 
-    header button {
-      align-items: center;
-      height: 40px;
-      width: 100px;
-      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
-      border-radius: 4px;
-      background-color: #EBEBEB;
-      margin-left: auto;
-    margin-right: auto;
-    font-family: "Ruda", sans-serif;
-    }
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.6);
+
+  position: sticky;
+}
+
+/* IMAGEM */
+header img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain; /* garante que não estoure */
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+/* BOTÃO CENTRALIZADO */
+header button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  height: 40px;
+  width: 100px;
+
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  background-color: #EBEBEB;
+
+  font-family: "Ruda", sans-serif;
+}
 
       main {
       display: flex;
@@ -454,6 +466,7 @@ document.getElementById("resultado40").innerHTML = document.getElementById("list
 
 </body>
 </html>
+
 
 
 
