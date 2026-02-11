@@ -487,25 +487,36 @@ async function gerarPDF() {
 
     const elemento = document.querySelector(".print");
 
+    // Salva estilo original
+    const originalDisplay = elemento.style.display;
+    const originalWidth = elemento.style.width;
+
+    // Força tamanho real A4
     elemento.style.display = "block";
+    elemento.style.width = "794px"; // largura aproximada A4 em px
+    elemento.style.position = "absolute";
+    elemento.style.left = "-9999px"; // tira da tela visível
 
     const canvas = await html2canvas(elemento, {
         scale: 2,
         useCORS: true,
+        windowWidth: 794
     });
 
-    const imgData = canvas.toDataURL("image/jpeg", 0.9);
+    const imgData = canvas.toDataURL("image/jpeg", 1.0);
 
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF("p", "mm", "a4");
 
-    const larguraPDF = 210;
-    const alturaPDF = (canvas.height * larguraPDF) / canvas.width;
-
-    pdf.addImage(imgData, "PNG", 0, 0, larguraPDF, alturaPDF);
+    pdf.addImage(imgData, "JPEG", 0, 0, 210, 297);
     pdf.save("forLaudos.pdf");
 
-    elemento.style.display = "none";}
+    // Restaura estilo
+    elemento.style.display = originalDisplay;
+    elemento.style.width = originalWidth;
+    elemento.style.position = "";
+    elemento.style.left = "";
+}
     </Script>
 
 <!-- função para pegar as infos da pagina principal e mandar para impressao em PDF, assim como adicionar a data. 
@@ -536,3 +547,4 @@ function apagar() { window.location.reload(); }
 
 </body>
 </html>
+
