@@ -231,7 +231,8 @@ textarea[name="mensagemGrande"] {
 
      <header class="header1">
   <img src="iconeSEMBG.png" height="100px" width="100px" alt="ícone">
-  <button onclick="salvar()">Salvar Laudo</button>
+  <button onclick="salvar()">Salvar</button>
+  <button onclick="apagar()">Apagar</button>
      </header>
 
 
@@ -487,12 +488,12 @@ document.getElementById("resultado20").innerHTML = document.getElementById("list
 document.getElementById("resultado30").innerHTML = document.getElementById("lista30").value;
 document.getElementById("resultado40").innerHTML = document.getElementById("lista40").value;
         document.getElementById("data1").innerHTML = dataAtual();
-        window.print();
-        }
+        window.print();}
 
-        function dataAtual() {
-            let Data = new Date();
-            return Data.getDate() + "/" + (Data.getMonth() + 1) + "/" + Data.getFullYear();} 
+function apagar() { window.location.reload(); }
+
+function dataAtual() { let Data = new Date(); return Data.getDate() + "/" + (Data.getMonth() + 1) + "/" + Data.getFullYear(); }
+
   </script>
 
 </body>
