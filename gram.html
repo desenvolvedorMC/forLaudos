@@ -376,7 +376,7 @@ textarea[name="mensagemGrande"] {
       <span id="data2">Data: <span id="data1"></span></span>
     </div>
 
-    <div id="infoAnalise">Informações da análise</div>
+    <div id="infoAnalise">Informações da Análise</div>
 
   </div>
 </div>
@@ -471,7 +471,8 @@ textarea[name="mensagemGrande"] {
 
 
 <script>
-        function salvar() {
+        function salvar() { 
+document.getElementById("infoAnalise").innerHTML = "<strong>Informações da Análise:</strong> " + document.getElementById("msg").value;
 document.getElementById("resultado1").innerHTML = document.getElementById("lista1").value;
 document.getElementById("resultado2").innerHTML = document.getElementById("lista2").value;
 document.getElementById("resultado3").innerHTML = document.getElementById("lista3").value;
