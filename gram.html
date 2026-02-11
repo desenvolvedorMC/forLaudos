@@ -507,7 +507,7 @@ async function gerarPDF() {
     const pageHeight = 297;
 
     pdf.addImage(imgData, "JPEG", 0, 0, pageWidth, pageHeight);
-    pdf.save("laudo.pdf");
+    pdf.save("forLaudos.pdf");
 
     elemento.style.display = "none";
 }
@@ -550,3 +550,4 @@ function apagar() { window.location.reload(); }
 
 </body>
 </html>
+
