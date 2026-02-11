@@ -203,13 +203,14 @@ textarea[name="mensagemGrande"] {
 
 .print {
     width: 794px;   /* largura fixa padrão A4 em pixels */
-    height: 25cm;
+    min-height: 1123px; /* altura A4 */
     background: white;
-    margin: auto;
     box-sizing: border-box;
     padding: 25px 25px 20px 25px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: none;
+    background: white;
+    margin: 0 auto;
     
 }
 
@@ -492,31 +493,21 @@ async function gerarPDF() {
 
     const canvas = await html2canvas(elemento, {
         scale: 2,
-        useCORS: true
+        useCORS: true,
+        windowWidth: 794,      // força largura fixa
+        windowHeight: 1123     // força altura fixa
     });
 
-    const imgData = canvas.toDataURL("image/png");
+    const imgData = canvas.toDataURL("image/jpeg", 1.0);
 
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF("p", "mm", "a4");
 
-    const pageWidth = pdf.internal.pageSize.getWidth();
-    const pageHeight = pdf.internal.pageSize.getHeight();
+    const pageWidth = 210;
+    const pageHeight = 297;
 
-    const imgWidth = canvas.width;
-    const imgHeight = canvas.height;
-
-    // Calcula proporção correta
-    const ratio = Math.min(pageWidth / imgWidth, pageHeight / imgHeight);
-
-    const newWidth = imgWidth * ratio;
-    const newHeight = imgHeight * ratio;
-
-    const x = (pageWidth - newWidth) / 2;
-    const y = 0;
-
-    pdf.addImage(imgData, "PNG", x, y, newWidth, newHeight);
-    pdf.save("forLaudos.pdf");
+    pdf.addImage(imgData, "JPEG", 0, 0, pageWidth, pageHeight);
+    pdf.save("laudo.pdf");
 
     elemento.style.display = "none";
 }
