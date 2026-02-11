@@ -41,7 +41,7 @@
       box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
       border-radius: 12px;}
 
-   header button {
+    header button {
       align-items: center;
       height: 40px;
       width: 100px;
@@ -51,7 +51,7 @@
       margin-left: auto;
     margin-right: auto;
     display: block;
-     font-family: "Ruda", sans-serif;
+    font-family: "Ruda", sans-serif;
     }
 
       main {
@@ -110,6 +110,9 @@
       margin-bottom: -100px;
     font-family: "Ruda", sans-serif;}
 
+    #email { color: #5e6e6e7e; }
+    #email:hover { color: #00FFF7; }
+
     input[type="text"] {
     width: 90%;
     padding: 8px;
@@ -125,13 +128,84 @@ textarea[name="mensagemGrande"] {
     font-family: "Ruda", sans-serif;
 }
 
-    #email { color: #5e6e6e7e; }
-    #email:hover { color: #00FFF7; }
+  .cabeca { margin: 0px;
+            padding: 0px;
+            text-align: left;
+            color: rgb(0, 0, 0) ;
+            padding: 0px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between; 
+                     
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            margin: -10px;
+            padding: -10px;
+            margin-top: -10px;
+            }
+
+        #forlaudos {  flex-direction: column; margin: 0px; padding: 0px; margin-left: -100px; }
+        #data2 {  flex-direction: column; margin: 0px; padding: 0px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      
+    }
+    caption {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    th, td {
+      border: 1px solid #111111;
+      padding: 8px;
+      text-align: left;
+    }
+
+#nome { text-align: left; }
+#resultados { text-align: center; }
+#vr { text-align: right; }
+#vr1 { text-align: center; }
+
+.print {
+    width: 21cm;
+    height: 25.6cm;
+    background: white;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: none;
+    
+}
+
+ @media print {
+            .print {
+                display: block;
+            }
+            .card {
+                display: none;
+            }
+            .header1 {
+                display: none;
+            }
+            .footer1 {
+                display: none;
+            }
+             .head {
+                display: none;
+            }
+        }
 
     </style>
 
 
-     <header>
+     <header class="header1">
   <img src="iconeSEMBG.png" height="100px" width="100px" alt="ícone">
   <button onclick="salvar()">Salvar Laudo</button>
      </header>
@@ -260,19 +334,124 @@ textarea[name="mensagemGrande"] {
       <option>Presente +++</option>
       </datalist>
       <br><br>
+    </div>
 
+    <div class="print"> 
+      <div class="cabeca"> <img src="qrcode.png" alt="QR Code">
+        <h1 id="forlaudos">forLaudos</h1>
+        <h1 id="data2">Data: <span id="data1"></span></h1>
+        </div>
+  <table>
+    <caption>
+     <strong>Microscopia de GRAM</strong>
+    </caption>
+      <thead>
+    <tr>
+      <th id="resultados" colspan="2">Resultados</th>
+      <th id="vr1">Valor de Referência</th>
+    </tr>
+   </thead>
 
+   <tbody>
+    <tr>
+      <th id="nome">Cocos Gram Negativo</th>
+      <td id="resultado1"></td>
+      <td id="vr">Ausente</td>
+    </tr>
+    <tr>
+    <th id="nome">Cocos Gram Positivo</th>
+      <td id="resultado2"></td>
+      <td id="vr">Ausente</td>
+    </tr>
+    <tr>
+     <th id="nome">Diplococos Gram Negativo</th>
+      <td id="resultado3"></td>
+      <td id="vr">Ausente</td>
+    </tr>
+    <tr>
+      <th id="nome">Diplococos Gram Positivo</th>
+      <td id="resultado4"></td>
+      <td id="vr">Ausente</td>
+    </tr>
+    <tr>
+      <th id="nome">Cocobacilos Gram Negativo</th>
+      <td id="resultado5"></td>
+      <td id="vr">Ausente</td>
+    </tr>
+    <tr>
+     <th id="nome">Cocobacilos Gram Positivo</th>
+      <td id="resultado6"></td>
+      <td id="vr">Ausente</td>
+    </tr>
+    <tr>
+      <th id="nome">Bacilos de Döderlein</th>
+      <td id="resultado7"></td>
+      <td id="vr">Ausente</td>
+    </tr>
+    <tr>
+      <th id="nome">Bacilos Difteróides</th>
+      <td id="resultado8"></td>
+      <td id="vr">Ausente</td>
+    </tr>
+    <tr>
+    <th id="nome">Gardnerella vaginalis</th>
+      <td id="resultado9"></td>
+      <td id="vr">Ausente</td>
+    </tr>
+    <tr>
+      <th id="nome">Mobiluncus sp</th>
+      <td id="resultado10"></td>
+      <td id="vr">Ausente</td>
+    </tr>
+    <tr>
+      <th id="nome">Leveduras</th>
+      <td id="resultado20"></td>
+      <td id="vr">Ausente</td>
+    </tr>
+    <tr>
+     <th id="nome">Hifas</th>
+      <td id="resultado30"></td>
+      <td id="vr">Ausente</td>
+    </tr>
+    <tr>
+    <th id="nome">Outros</th>
+      <td id="resultado40"></td>
+      <td id="vr">Ausente</td>
+    </tr>
+   </tbody>
+
+  </table>
     </div>
     </main>
+    
 
- <footer>
+ <footer class="footer1">
 <a id="email" href="mailto:desenvolvedor.mc@gmail.com">desenvolvedor.mc@gmail.com</a>
   </footer>
 
+<script>
+        function salvar() {
+document.getElementById("resultado1").innerHTML = document.getElementById("lista1").value;
+document.getElementById("resultado2").innerHTML = document.getElementById("lista2").value;
+document.getElementById("resultado3").innerHTML = document.getElementById("lista3").value;
+document.getElementById("resultado4").innerHTML = document.getElementById("lista4").value;
+document.getElementById("resultado5").innerHTML = document.getElementById("lista5").value;
+document.getElementById("resultado6").innerHTML = document.getElementById("lista6").value;
+document.getElementById("resultado7").innerHTML = document.getElementById("lista7").value;
+document.getElementById("resultado8").innerHTML = document.getElementById("lista8").value;
+document.getElementById("resultado9").innerHTML = document.getElementById("lista9").value;
+document.getElementById("resultado10").innerHTML = document.getElementById("lista10").value;
+document.getElementById("resultado20").innerHTML = document.getElementById("lista20").value;
+document.getElementById("resultado30").innerHTML = document.getElementById("lista30").value;
+document.getElementById("resultado40").innerHTML = document.getElementById("lista40").value;
+        document.getElementById("data1").innerHTML = dataAtual();
+        window.print();
+        }
+
+        function dataAtual() {
+            let Data = new Date();
+            return Data.getDate() + "/" + (Data.getMonth() + 1) + "/" + Data.getFullYear();} 
+  </script>
+
 </body>
-
 </html>
-
-
-
-
