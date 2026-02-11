@@ -12,7 +12,7 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap');  /* biblioteca de fonte do google */
 
-    
+
     /* aqui começa o código da pagina que carrega inicialmente */
     body {
       margin: 0px;
@@ -202,7 +202,7 @@ textarea[name="mensagemGrande"] {
 /* aqui e o tamanho da pagina na hora do print, tambem mostra ou nao o display junto com a primeira pagina ao carregar */
 
 .print {
-    width: 21cm;
+    width: 794px;   /* largura fixa padrão A4 em pixels */
     height: 25cm;
     background: white;
     margin: auto;
@@ -210,6 +210,7 @@ textarea[name="mensagemGrande"] {
     padding: 25px 25px 20px 25px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: none;
+    
 }
 
  @media print {
@@ -487,36 +488,39 @@ async function gerarPDF() {
 
     const elemento = document.querySelector(".print");
 
-    // Salva estilo original
-    const originalDisplay = elemento.style.display;
-    const originalWidth = elemento.style.width;
-
-    // Força tamanho real A4
     elemento.style.display = "block";
-    elemento.style.width = "794px"; // largura aproximada A4 em px
-    elemento.style.position = "absolute";
-    elemento.style.left = "-9999px"; // tira da tela visível
 
     const canvas = await html2canvas(elemento, {
         scale: 2,
-        useCORS: true,
-        windowWidth: 794
+        useCORS: true
     });
 
-    const imgData = canvas.toDataURL("image/jpeg", 1.0);
+    const imgData = canvas.toDataURL("image/png");
 
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF("p", "mm", "a4");
 
-    pdf.addImage(imgData, "JPEG", 0, 0, 210, 297);
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+
+    const imgWidth = canvas.width;
+    const imgHeight = canvas.height;
+
+    // Calcula proporção correta
+    const ratio = Math.min(pageWidth / imgWidth, pageHeight / imgHeight);
+
+    const newWidth = imgWidth * ratio;
+    const newHeight = imgHeight * ratio;
+
+    const x = (pageWidth - newWidth) / 2;
+    const y = 0;
+
+    pdf.addImage(imgData, "PNG", x, y, newWidth, newHeight);
     pdf.save("forLaudos.pdf");
 
-    // Restaura estilo
-    elemento.style.display = originalDisplay;
-    elemento.style.width = originalWidth;
-    elemento.style.position = "";
-    elemento.style.left = "";
+    elemento.style.display = "none";
 }
+
     </Script>
 
 <!-- função para pegar as infos da pagina principal e mandar para impressao em PDF, assim como adicionar a data. 
@@ -540,11 +544,18 @@ document.getElementById("resultado40").innerHTML = document.getElementById("list
         document.getElementById("data1").innerHTML = dataAtual(); 
         await gerarPDF(); }
 
-function dataAtual() { let Data = new Date(); return Data.getDate() + "/" + (Data.getMonth() + 1) + "/" + Data.getFullYear();}
+function dataAtual() {
+    let Data = new Date();
+
+    let dia = String(Data.getDate()).padStart(2, '0');
+    let mes = String(Data.getMonth() + 1).padStart(2, '0');
+    let ano = Data.getFullYear();
+
+    return dia + "/" + mes + "/" + ano;
+}
 
 function apagar() { window.location.reload(); } 
   </script>
 
 </body>
 </html>
-
