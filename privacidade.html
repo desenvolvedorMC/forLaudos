@@ -20,26 +20,31 @@
       }
 
     header {
-      background-color: #5e6e6e7e;
-      padding: 7px;
-      margin: 10px;
-      margin-top: 4px;
-      margin-bottom: -22px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom-left-radius: 12px;
-      border-bottom-right-radius: 12px;
-      box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.6);}
+  height: 100px;
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* esquerda | centro | direita */
+  align-items: center;
+  
+  background-color: #5e6e6e7e;
+  padding: 10px 20px;
+  margin: 10px;
+  margin-top: 4px;
+  margin-bottom: -22px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.6);
+    }
 
     header img {
-      height: 100px;
-      width: 100px;
-      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
-      border-radius: 12px;}
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    }
 
       main {
       display: flex;
@@ -146,4 +151,5 @@ Se você tiver alguma dúvida ou sugestão sobre as informações mencionadas aq
   </footer>
 
 </body>
+
 </html>
