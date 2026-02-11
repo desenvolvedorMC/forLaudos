@@ -12,6 +12,7 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap');
 
+    /* aqui começa o código da pagina que carrega inicialmente */
     body {
       margin: 0px;
       padding: 0px;
@@ -133,27 +134,41 @@ textarea[name="mensagemGrande"] {
     font-family: "Ruda", sans-serif;
 }
 
-  .cabeca { margin: 0px;
-            padding: 0px;
-            text-align: left;
-            color: rgb(0, 0, 0) ;
-            padding: 0px;
-            border-radius: 4px;
-            display: flex;
-            justify-content: space-between; 
-                     
-        }
+/* aqui começa o código da impressão */
 
-        img {
-            width: 150px;
-            height: 150px;
-            margin: -10px;
-            padding: -10px;
-            margin-top: -10px;
-            }
+.cabeca {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
 
-        #forlaudos {  flex-direction: column; margin: 0px; padding: 0px; margin-left: -100px; }
-        #data2 {  flex-direction: column; margin: 0px; padding: 0px; }
+.cabeca-esq img {
+  width: 110px;
+  height: 110px;
+}
+
+.cabeca-dir {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.linha-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#forlaudos {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#infoAnalise {
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+
 
     table {
       width: 100%;
@@ -177,6 +192,8 @@ textarea[name="mensagemGrande"] {
 #vr { text-align: right; }
 #vr1 { text-align: center; }
 
+/* aqui e o tamanho da pagina na hora do print, tambem mostra ou nao o display junto com a primeira pagina ao carregar */
+
 .print {
     width: 21cm;
     height: 25cm;
@@ -186,6 +203,7 @@ textarea[name="mensagemGrande"] {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: none;
+  
     
 }
 
@@ -210,10 +228,12 @@ textarea[name="mensagemGrande"] {
     </style>
 
 
+
      <header class="header1">
   <img src="iconeSEMBG.png" height="100px" width="100px" alt="ícone">
   <button onclick="salvar()">Salvar Laudo</button>
      </header>
+
 
 
      <main>
@@ -341,11 +361,25 @@ textarea[name="mensagemGrande"] {
       <br><br>
     </div>
 
+
+
     <div class="print"> 
-      <div class="cabeca"> <img src="qrcode.png" alt="QR Code">
-        <h1 id="forlaudos">forLaudos</h1>
-        <h1 id="data2">Data: <span id="data1"></span></h1>
-        </div>
+
+      <div class="cabeca">
+  <div class="cabeca-esq">
+    <img src="qrcode.png" alt="QR Code">
+  </div>
+
+  <div class="cabeca-dir">
+    <div class="linha-topo">
+      <span id="forlaudos">forLaudos</span>
+      <span id="data2">Data: <span id="data1"></span></span>
+    </div>
+
+    <div id="infoAnalise">Informações da análise</div>
+
+  </div>
+</div>
   <table>
     <caption>
      <strong>Microscopia de GRAM</strong>
@@ -430,9 +464,11 @@ textarea[name="mensagemGrande"] {
     </main>
     
 
+
  <footer class="footer1">
 <a id="email" href="mailto:desenvolvedor.mc@gmail.com">desenvolvedor.mc@gmail.com</a>
   </footer>
+
 
 <script>
         function salvar() {
@@ -460,17 +496,3 @@ document.getElementById("resultado40").innerHTML = document.getElementById("list
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
