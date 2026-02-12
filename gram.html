@@ -53,12 +53,17 @@ header button {
   justify-self: center;
   height: 40px;
   width: 120px;
-
   border-radius: 6px;
   background-color: #EBEBEB;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-
   font-family: "Ruda", sans-serif;
+}
+
+#btnSalvar {
+  border-color:  #00FFF7;
+}
+
+#btnApagar {
+  border-color: #F20039
 }
 
       main {
@@ -171,7 +176,7 @@ textarea[name="mensagemGrande"] {
 }
 
 .for {
-  color: #00FFF7; /* para pintar apenas as 3 letras do logo */
+  color: #00FFF7; /* para pintar apenas as 3 letras do nome forLaudos */
 }
 
 #infoAnalise {
@@ -257,8 +262,8 @@ textarea[name="mensagemGrande"] {
 
      <header class="header1">
   <img src="iconeSEMBG.png" height="100px" width="100px" alt="ícone">
-  <button onclick="salvar()">Salvar</button>
-  <button onclick="apagar()">Apagar</button>
+  <button id="btnSalvar" onclick="salvar()">Salvar</button>
+  <button id="btnApagar" onclick="apagar()">Apagar</button>
      </header>
 
 
