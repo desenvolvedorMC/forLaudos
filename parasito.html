@@ -86,7 +86,7 @@ header button {
       margin: 22px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       position: relative;
-      text-align: left;
+      text-align: center;
       text-indent: 30px;
       line-height: 2em;
   }
@@ -139,6 +139,18 @@ textarea[name="mensagemGrande"] {
     text-align: center;
     font-family: "Ruda", sans-serif;
 }
+
+.amostra label {
+    display: flex;
+    align-items: left;
+}
+
+fieldset { text-align: left;
+width: 100%;
+margin-left: 4.2%;
+max-width: 89%; }
+
+
 
 /* aqui começa o código da impressão */
 
@@ -277,20 +289,21 @@ textarea[name="mensagemGrande"] {
       <br><br>
       <fieldset class="amostra" data-numero="1">
   <legend>Amostra 1</legend>
-<label><input type="checkbox" value="Ancilostomídeos" data-amostra="1">Ancilostomídeos</label><br>
-<label><input type="checkbox" value="Blastocystis hominis" data-amostra="1">Blastocystis hominis</label><br>
+<label><input type="checkbox" value="Ancilostomídeos" data-amostra="1">Ancilostomídeos</label>
+<label><input type="checkbox" value="Blastocystis hominis" data-amostra="1">Blastocystis hominis</label>
+<label><input type="checkbox" value="Ascaris lumbricoides" data-amostra="1">Ascaris lumbricoides</label>
 </fieldset>
 
 <fieldset class="amostra" data-numero="2">
   <legend>Amostra 2</legend>
-<label><input type="checkbox" value="Ancilostomídeos" data-amostra="2">Ancilostomídeos</label><br>
-<label><input type="checkbox" value="Blastocystis hominis" data-amostra="2">Blastocystis hominis</label><br>
+<label><input type="checkbox" value="Ancilostomídeos" data-amostra="2">Ancilostomídeos</label>
+<label><input type="checkbox" value="Blastocystis hominis" data-amostra="2">Blastocystis hominis</label>
 </fieldset>
 
 <fieldset class="amostra" data-numero="3">
   <legend>Amostra 3</legend>
-<label><input type="checkbox" value="Ancilostomídeos" data-amostra="3">Ancilostomídeos</label><br>
-<label><input type="checkbox" value="Blastocystis hominis" data-amostra="3">Blastocystis hominis</label><br>
+<label><input type="checkbox" value="Ancilostomídeos" data-amostra="3">Ancilostomídeos</label>
+<label><input type="checkbox" value="Blastocystis hominis" data-amostra="3">Blastocystis hominis</label>
 </fieldset>
       <br><br>
     </div>
