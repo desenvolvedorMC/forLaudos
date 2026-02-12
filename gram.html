@@ -170,6 +170,10 @@ textarea[name="mensagemGrande"] {
   padding: 0;
 }
 
+.for {
+  color: #00FFF7; /* para pintar apenas as 3 letras do logo */
+}
+
 #infoAnalise {
   margin: 6px 0 0 0;
   font-size: 0.95rem;
@@ -185,19 +189,33 @@ textarea[name="mensagemGrande"] {
 
     caption {
       font-size: 1rem;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
     }
 
+    #tituloExameImpresso {
+  text-align: left; 
+  border-radius: 5px; 
+  border: 1px solid #EBEBEB; 
+  background-color: #EBEBEB;  
+  padding: 8px;  
+  border: 1px solid #0d0d0d;
+}
+
     th, td {
-      border: 1px solid #111111;
+      border: 1px solid #EBEBEB; /* cor da linha da tabela impressa */
       padding: 8px;
-      text-align: left;
+      text-align: center;
+      border-radius: 5px; 
     }
+
+
+
+
 
 #nome { text-align: left; }
 #resultados { text-align: center; }
 #vr { text-align: right; }
-#vr1 { text-align: center; }
+#vr1 { text-align: right; }
 
 /* aqui e o tamanho da pagina na hora do print, tambem mostra ou nao o display junto com a primeira pagina ao carregar */
 
@@ -232,6 +250,7 @@ textarea[name="mensagemGrande"] {
             }
         }
 
+       
     </style>
 
 
@@ -382,7 +401,8 @@ textarea[name="mensagemGrande"] {
  
   <div class="cabeca-dir">  <!--cabeçalho do laudo-->
     <div class="linha-topo">
-      <span id="forlaudos">forLaudos</span>
+      <span id="forlaudos">
+      <span class="for">for</span>Laudos</span> <!--para conseguir pintar as apenas 3 letras da palavra-->
       <span id="data2">Data: <span id="data1"></span></span>
     </div>
     <div id="infoAnalise">Informações da Análise</div>
@@ -391,11 +411,12 @@ textarea[name="mensagemGrande"] {
 </div>
   <table>  <!--tabela que vai receber as informações para gerar o PDF-->
     <caption>
-     <strong>Microscopia de GRAM</strong>
+     <strong id="tituloExameImpresso">Microscopia de GRAM</strong>
     </caption>
       <thead>
     <tr>
-      <th id="resultados" colspan="2">Resultados</th>
+      <th id="linhaUm"></th>
+      <th id="resultados">Resultados</th>
       <th id="vr1">Valor de Referência</th>
     </tr>
    </thead>
@@ -550,4 +571,3 @@ function apagar() { window.location.reload(); }
 
 </body>
 </html>
-
