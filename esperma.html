@@ -300,9 +300,9 @@ margin: auto;}
 
 <fieldset>
   <legend>Abstinência Sexual ?</legend>
-<input type="text" placeholder="Escolha ou digite" name="lista" id="lista1" list="lista11">
-      <label for="lista1"></label>
-      <datalist id="lista11">
+<input type="text" placeholder="Escolha ou digite" name="lista" id="lista91" list="lista911">
+      <label for="lista91"></label>
+      <datalist id="lista911">
       <option>2 dias</option>
       <option>3 dias</option>
       <option>4 dias</option>
@@ -461,7 +461,7 @@ margin: auto;}
 <br><br>
 
 <fieldset class="amostra" data-numero="3">
-  <legend>Morfologia da Peça Intermediária</legend>
+  <legend>Morfologia da Cauda</legend>
 <label><input type="checkbox" value="Normal >30%" data-amostra="3">Normal >30%</label>
 <label><input type="checkbox" value="Anormal <=30%" data-amostra="3">Anormal <=30%</label>
 <label><input type="checkbox" value="Curta" data-amostra="3">Curta</label>
@@ -477,14 +477,20 @@ margin: auto;}
 <output id="ival1">0</output>%</label>
 <label>B-Motilidade Não Progressiva:<input type="range" name="range2" id="range2" min="0" max="100" value="0" oninput="ival2.innerHTML = Number(range2.value)">
 <output id="ival2">0</output>%</label>
-<label>C-Motilidade Imóveis:<input type="range" name="range3" id="range3" min="0" max="100" value="0" oninput="ival3.innerHTML = Number(range3.value)">
+<label>C-Imóveis:<input type="range" name="range3" id="range3" min="0" max="100" value="0" oninput="ival3.innerHTML = Number(range3.value)">
 <output id="ival3">0</output>%</label>
 </fieldset>
 <br><br>
 
-
-
-
+<fieldset>
+  <legend>Vitalidade</legend>
+ <input type="text" placeholder="Escolha ou digite" name="lista" id="lista11" list="lista111">
+      <label for="lista11"></label>
+      <datalist id="lista111">
+      <option>Normal > 50%</option>
+      <option>Anormal <= 50%</option>
+      </datalist>
+      </fieldset>
     </div>
 
 
@@ -514,7 +520,7 @@ margin: auto;}
     </caption>
       <thead>
     <tr>
-      <th id="linhaUm">ESPERMA</th>
+      <th id="nome"><strong>ANAMNESE</strong></th>
       <th id="resultado">Resultado</th>
       <th id="vr1">Valor de Referência</th>
     </tr>
@@ -522,19 +528,105 @@ margin: auto;}
 
    <tbody>
     <tr>
-      <th id="nome">Amostra 1</th>
-      <td id="resultado1"></td>
-      <td id="vr">Ausente</td>
-    </tr>
-    <tr>
-    <th id="nome">Amostra 2</th>
+    <th id="nome">Abstinência sexual</th>
       <td id="resultado2"></td>
-      <td id="vr">Ausente</td>
+      <td id="vr">2 até 7 dias</td>
     </tr>
     <tr>
-     <th id="nome">Amostra 3</th>
+     <th id="nome">Vasectomizado</th>
       <td id="resultado3"></td>
-      <td id="vr">Ausente</td>
+      <td id="vr">N/A</td>
+    </tr>
+    <tr>
+      <th id="nome">Hora da coleta</th>
+      <td id="resultado1"></td>
+      <td id="vr">N/A</td>
+    </tr>
+    <tr>
+     <th id="nome"><strong>MACROSCOPIA</strong></th>
+    </tr>
+    <tr>
+     <th id="nome">Volume</th>
+      <td id="resultado3"></td>
+      <td id="vr">>= 1,5 mL</td>
+    </tr>
+    <tr>
+     <th id="nome">Cor</th>
+      <td id="resultado3"></td>
+      <td id="vr">Branco opalescente</td>
+    </tr>
+    <tr>
+     <th id="nome">Viscosidade</th>
+      <td id="resultado3"></td>
+      <td id="vr">Normal</td>
+    </tr>
+    <tr>
+     <th id="nome">pH</th>
+      <td id="resultado3"></td>
+      <td id="vr">7,2 até 8,0</td>
+    </tr>
+    <tr>
+     <th id="nome">Liquefação</th>
+      <td id="resultado3"></td>
+      <td id="vr"><= 30 min</td>
+    </tr>
+    <tr>
+     <th id="nome"><strong>MICROSCOPIA</strong></th>
+    </tr>
+    <tr>
+     <th id="nome">Leucócitos</th>
+      <td id="resultado3"></td>
+      <td id="vr"><= 1.000/mm³</td>
+    </tr>
+    <tr>
+     <th id="nome">Hemácias</th>
+      <td id="resultado3"></td>
+      <td id="vr"><= 1.000/mm³</td>
+    </tr>
+    <tr>
+     <th id="nome">Concentração de espermatozoides</th>
+      <td id="resultado3"></td>
+      <td id="vr">>= 15 milhões/mL</td>
+    </tr>
+    <tr>
+     <th id="nome">Total ejaculado</th>
+      <td id="resultado3"></td>
+      <td id="vr">>= 39 milhões</td>
+    </tr>
+    <tr>
+     <th id="nome">Morfologia da cabeça</th>
+      <td id="resultado3"></td>
+      <td id="vr">> 30%</td>
+    </tr>
+    <tr>
+     <th id="nome">Morfologia da peça intermediária</th>
+      <td id="resultado3"></td>
+      <td id="vr">> 30%</td>
+    </tr>
+    <tr>
+     <th id="nome">Morfologia da cauda</th>
+      <td id="resultado3"></td>
+      <td id="vr">> 30%</td>
+    </tr>
+    <tr>
+     <th id="nome">A-Motilidade progressiva</th>
+      <td id="resultado3"></td>
+      <td id="vr">> 50%</td>
+    </tr>
+    <tr>
+     <th id="nome">B-Motilidade não progressiva</th>
+      <td id="resultado3"></td>
+      <td id="vr">N/A</td>
+    </tr>
+    <tr>
+     <th id="nome">C-Imóveis</th>
+      <td id="resultado3"></td>
+      <td id="vr">N/A</td>
+    </tr>
+    <tr>
+     <th id="nome">Vitalidade</th>
+      <td id="resultado3"></td>
+      <td id="vr">> 50%</td>
     </tr>
    </tbody>
 
