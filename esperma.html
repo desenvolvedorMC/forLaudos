@@ -141,13 +141,7 @@ textarea[name="mensagemGrande"] {
 }
 
 /*hora da coleta*/
-#hora {
-    width: 90%;
-    
-    text-align: center;
-     font-size: 1rem;
-    
-}
+
 
 
 
@@ -160,6 +154,11 @@ textarea[name="mensagemGrande"] {
 fieldset { text-align: left;
 margin: auto;}
 
+#hora {
+    width: 93%;
+    font-size: 2rem;
+  
+}
 
 
 /* aqui começa o código da impressão */
@@ -298,56 +297,184 @@ margin: auto;}
 <textarea name="mensagemGrande" id="msg" rows="5" placeholder="Informações da Análise"></textarea>
       <br><br>
 
+
 <fieldset>
-  <label>Horário da coleta</label><input id="hora" type="time">
+  <legend>Abstinência Sexual ?</legend>
+<input type="text" placeholder="Escolha ou digite" name="lista" id="lista1" list="lista11">
+      <label for="lista1"></label>
+      <datalist id="lista11">
+      <option>2 dias</option>
+      <option>3 dias</option>
+      <option>4 dias</option>
+      <option>5 dias</option>
+      <option>6 dias</option>
+      <option>7 dias</option>
+      </datalist>
+      </fieldset>
+<br><br>
+
+<fieldset>
+  <legend>Vasectomizado ?</legend>
+<input type="text" placeholder="Escolha ou digite" name="lista" id="lista2" list="lista22">
+      <label for="lista2"></label>
+      <datalist id="lista22">
+      <option>Não</option>
+      <option>Sim</option>
+      </datalist>
+      </fieldset>
+<br><br>
+
+<fieldset>
+  <label>Horário da coleta<br></label><input id="hora" type="time">
 </fieldset>
-      
       <br><br>
-<fieldset class="amostra">
-<label>Abstinência Sexual</label>
-<div class="inline">
-<label><input type="radio" name="sexo"> Masculino</label>
-<label><input type="radio" name="sexo"> Feminino</label>
-<label><input type="radio" name="sexo"> Pokemon</label>
+
+<fieldset>
+<label>Volume<br></label>
+<input id="volume" type="text" placeholder="Digite">
 </fieldset>
 <br><br>
 
-<label></label>
-<input type="text" placeholder="Digite o volume" required>
+<fieldset>
+  <legend>Cor</legend>
+<input type="text" placeholder="Escolha ou digite" name="lista" id="lista3" list="lista33">
+      <label for="lista3"></label>
+      <datalist id="lista33">
+      <option>Branco Opalescente</option>
+      <option>Avermelhado</option>
+      <option>Amarelado</option>
+      </datalist>
+      </fieldset>
+<br><br>
+
+
+<fieldset>
+  <legend>Viscosidade</legend>
+<input type="text" placeholder="Escolha ou digite" name="lista" id="lista4" list="lista44">
+      <label for="lista4"></label>
+      <datalist id="lista44">
+      <option>Reduzida</option>
+      <option>Normal</option>
+      <option>Ampliada</option>
+      </datalist>
+      </fieldset>
+<br><br>
+
+<fieldset>
+  <legend>pH</legend>
+ <input type="text" placeholder="Escolha ou digite" name="lista" id="lista5" list="lista55">
+      <label for="lista5"></label>
+      <datalist id="lista55">
+      <option>Anormal <=7,1</option>
+      <option>Normal 7,2 até 8,0</option>
+      <option>Anormal >=8,1</option>
+      </datalist>
+      </fieldset>
+<br><br>
+
+
+<fieldset>
+  <legend>Liquefação</legend>
+ <input type="text" placeholder="Escolha ou digite" name="lista" id="lista6" list="lista66">
+      <label for="lista6"></label>
+      <datalist id="lista66">
+      <option>Normal <= 30 min</option>
+      <option>Anormal > 31 min</option>
+      </datalist>
+      </fieldset>
+<br><br>
+
+
+<fieldset>
+  <legend>Leucócitos</legend>
+ <input type="text" placeholder="Escolha ou digite" name="lista" id="lista7" list="lista77">
+      <label for="lista7"></label>
+      <datalist id="lista77">
+      <option>Normal <= 1.000/mm³</option>
+      <option>Anormal > 1.000/mm³</option>
+      </datalist>
+      </fieldset>
+<br><br>
+
+
+<fieldset>
+  <legend>Hemácias</legend>
+ <input type="text" placeholder="Escolha ou digite" name="lista" id="lista8" list="lista88">
+      <label for="lista8"></label>
+      <datalist id="lista88">
+      <option>Normal <= 1.000/mm³</option>
+      <option>Anormal > 1.000/mm³</option>
+      </datalist>
+      </fieldset>
+<br><br>
+
+<fieldset>
+  <legend>Nº de Espermatozoides</legend>
+ <input type="text" placeholder="Escolha ou digite" name="lista" id="lista9" list="lista99">
+      <label for="lista9"></label>
+      <datalist id="lista99">
+      <option>Normal > 15 milhões/mL</option>
+      <option>Anormal <= 15 milhões/mL</option>
+      </datalist>
+      </fieldset>
+<br><br>
+
+<fieldset>
+  <legend>Nº de Espermatozoides Ejaculados</legend>
+ <input type="text" placeholder="Escolha ou digite" name="lista" id="lista10" list="lista100">
+      <label for="lista10"></label>
+      <datalist id="lista100">
+      <option>Normal > 39 milhões/mL</option>
+      <option>Anormal <= 39 milhões/mL</option>
+      </datalist>
+      </fieldset>
 <br><br>
 
       <fieldset class="amostra" data-numero="1">
-  <legend>Amostra 1</legend>
-<label><input type="checkbox" value="Ausente" data-amostra="1">Ausente</label>
-<label><input type="checkbox" value="Ancilostomídeos" data-amostra="1">Ancilostomídeos</label>
-<label><input type="checkbox" value="Ascaris lumbricoides" data-amostra="1">Ascaris lumbricoides</label>
-<label><input type="checkbox" value="Balantium coli" data-amostra="1">Balantium coli</label>
-<label><input type="checkbox" value="Blastocystis hominis" data-amostra="1">Blastocystis hominis</label>
-<label><input type="checkbox" value="Chilomastix mesnili" data-amostra="1">Chilomastix mesnili</label>
-<label><input type="checkbox" value="Diphyllobothrium sp" data-amostra="1">Diphyllobothrium sp</label>
-<label><input type="checkbox" value="Endolimax nana" data-amostra="1">Endolimax nana</label>
-<label><input type="checkbox" value="Entamoeba histolytica" data-amostra="1">Entamoeba histolytica</label>
-<label><input type="checkbox" value="Entamoeba coli" data-amostra="1">Entamoeba coli</label>
-<label><input type="checkbox" value="Entamoeba hartmanni" data-amostra="1">Entamoeba hartmanni</label>
-<label><input type="checkbox" value="Entamoeba histolytica/dispar" data-amostra="1">Entamoeba histolytica/dispar</label>
-<label><input type="checkbox" value="Enterobios vermiculares" data-amostra="1">Enterobios vermiculares</label>
-<label><input type="checkbox" value="Giardia duodenalis" data-amostra="1">Giardia duodenalis</label>
-<label><input type="checkbox" value="Giardia lamblia" data-amostra="1">Giardia lamblia</label>
-<label><input type="checkbox" value="Hymenolepis nana" data-amostra="1">Hymenolepis nana</label>
-<label><input type="checkbox" value="Hymenolepis diminuta" data-amostra="1">Hymenolepis diminuta</label>
-<label><input type="checkbox" value="Iodamoeba butschilii" data-amostra="1">Iodamoeba butschilii</label>
-<label><input type="checkbox" value="Oocistos de Cryptosporidium sp" data-amostra="1">Oocistos Cryptosporidium sp</label>
-<label><input type="checkbox" value="Oocistos de Isospora belli" data-amostra="1">Oocistos Isospora belli</label>
-<label><input type="checkbox" value="Schistosoma mansoni" data-amostra="1">Schistosoma mansoni</label>
-<label><input type="checkbox" value="Strongyloides stercoralis" data-amostra="1">Strongyloides stercoralis</label>
-<label><input type="checkbox" value="Taenia sp" data-amostra="1">Taenia sp</label>
-<label><input type="checkbox" value="Taenia saginata" data-amostra="1">Taenia saginata</label>
-<label><input type="checkbox" value="Taenia solium" data-amostra="1">Taenia solium</label>
-<label><input type="checkbox" value="Toxocara canis" data-amostra="1">Toxocara canis</label>
-<label><input type="checkbox" value="Trichuris trichiura" data-amostra="1">Trichuris trichiura</label>
-<label><input type="checkbox" value="Urbanarum sp" data-amostra="1">Urbanarum sp</label>
+  <legend>Morfologia da Cabeça</legend>
+<label><input type="checkbox" value="Normal >30%" data-amostra="1">Normal >30%</label>
+<label><input type="checkbox" value="Anormal <=30%" data-amostra="1">Anormal <=30%</label>
+<label><input type="checkbox" value="Acéfalos" data-amostra="1">Acéfalos</label>
+<label><input type="checkbox" value="Amorfos" data-amostra="1">Amorfos</label>
+<label><input type="checkbox" value="Bicéfalos" data-amostra="1">Bicéfalos</label>
+<label><input type="checkbox" value="Fusiformes" data-amostra="1">Fusiformes</label>
+<label><input type="checkbox" value="Macrocéfalos" data-amostra="1">Macrocéfalos</label>
+<label><input type="checkbox" value="Microcéfalos" data-amostra="1">Microcéfalos</label>
+<label><input type="checkbox" value="Piriformes" data-amostra="1">Piriformes</label>
+<label><input type="checkbox" value="Redondos" data-amostra="1">Redondos</label>
+<label><input type="checkbox" value="Vacuolados" data-amostra="1">Vacuolados</label>
 <label><input type="checkbox" value="Outros" data-amostra="1">Outros</label>
 </fieldset>
+<br><br>
+
+<fieldset class="amostra" data-numero="2">
+  <legend>Morfologia da Peça Intermediária</legend>
+<label><input type="checkbox" value="Normal >30%" data-amostra="2">Normal >30%</label>
+<label><input type="checkbox" value="Anormal <=30%" data-amostra="2">Anormal <=30%</label>
+<label><input type="checkbox" value="Anômala" data-amostra="2">Anômala</label>
+<label><input type="checkbox" value="Dobrada" data-amostra="2">Dobrada</label>
+<label><input type="checkbox" value="Excesso de citoplasma" data-amostra="2">Excesso de citoplasma</label>
+<label><input type="checkbox" value="Fina" data-amostra="2">Fina</label>
+<label><input type="checkbox" value="Grossa" data-amostra="2">Grossa</label>
+<label><input type="checkbox" value="Outros" data-amostra="2">Outros</label>
+</fieldset>
+<br><br>
+
+<fieldset class="amostra" data-numero="3">
+  <legend>Morfologia da Peça Intermediária</legend>
+<label><input type="checkbox" value="Normal >30%" data-amostra="3">Normal >30%</label>
+<label><input type="checkbox" value="Anormal <=30%" data-amostra="3">Anormal <=30%</label>
+<label><input type="checkbox" value="Curta" data-amostra="3">Curta</label>
+<label><input type="checkbox" value="Dobrada" data-amostra="3">Dobrada</label>
+<label><input type="checkbox" value="Enrolada" data-amostra="3">Enrolada</label>
+<label><input type="checkbox" value="Outros" data-amostra="3">Outros</label>
+</fieldset>
+<br><br>
+
+
+
+
+
 
 
     </div>
