@@ -139,6 +139,15 @@ textarea[name="mensagemGrande"] {
     font-family: "Ruda", sans-serif;
 }
 
+
+fieldset { text-align: left;
+margin: auto;}
+
+.amostra label {
+    display: flex;
+    align-items: left;}
+
+
 /* aqui começa o código da impressão */
 
 .cabeca {
@@ -461,6 +470,30 @@ textarea[name="mensagemGrande"] {
       <option>Presente +++</option>
       <option>Presente ++++</option>
       </datalist>
+<br><br>
+      <fieldset class="amostra" data-numero="1">
+  <legend>Cilindros</legend>
+<label><input type="checkbox" value="Ausente" data-amostra="1">Ausente</label>
+<label><input type="checkbox" value="Hialino" data-amostra="1">Hialino</label>
+<label><input type="checkbox" value="Granuloso" data-amostra="1">Granuloso</label>
+<label><input type="checkbox" value="Céreo" data-amostra="1">Céreo</label>
+<label><input type="checkbox" value="Leucocitário" data-amostra="1">Leucocitário</label>
+<label><input type="checkbox" value="Hemático" data-amostra="1">Hemático</label>
+<label><input type="checkbox" value="Outros" data-amostra="1">Outros</label>
+</fieldset>
+<br><br>
+
+<fieldset class="amostra" data-numero="2">
+  <legend>Cristais</legend>
+<label><input type="checkbox" value="Ausente" data-amostra="2">Ausente</label>
+<label><input type="checkbox" value="Oxalato de cálcio" data-amostra="2">Oxalato de cálcio</label>
+<label><input type="checkbox" value="Ácido úrico" data-amostra="2">Ácido úrico</label>
+<label><input type="checkbox" value="Urato amorfo" data-amostra="2">Urato amorfo</label>
+<label><input type="checkbox" value="Fosfato triplo" data-amostra="2">Fosfato triplo</label>
+<label><input type="checkbox" value="Fosfato amorfo" data-amostra="2">Fosfato amorfo</label>
+<label><input type="checkbox" value="Cristais de cistina" data-amostra="2">Cristais de cistina</label>
+<label><input type="checkbox" value="Outros" data-amostra="2">Outros</label>
+</fieldset>
     </div>
 
 
@@ -608,6 +641,16 @@ textarea[name="mensagemGrande"] {
       <td id="resultado20"></td>
       <td id="vr">Ausente</td>
     </tr>
+     <tr>
+     <th id="nome">Cilindros</th>
+      <td id="resultado21"></td>
+      <td id="vr">Ausente</td>
+    </tr>
+     <tr>
+     <th id="nome">Cristais</th>
+      <td id="resultado22"></td>
+      <td id="vr">Ausente</td>
+    </tr>
   </table>
     </div>
     </main>
@@ -680,6 +723,32 @@ document.getElementById("resultado17").innerHTML = document.getElementById("list
 document.getElementById("resultado18").innerHTML = document.getElementById("lista18").value;
 document.getElementById("resultado19").innerHTML = document.getElementById("lista19").value;
 document.getElementById("resultado20").innerHTML = document.getElementById("lista20").value;
+
+//logica para checkBox
+    const resultados = {
+        1: [],
+        2: []
+    };
+
+    // pega todos os checkboxes marcados
+    const marcados = document.querySelectorAll('input[type="checkbox"]:checked');
+
+    marcados.forEach(cb => {
+        const amostra = cb.dataset.amostra; // 1 ou 2
+        resultados[amostra].push(cb.value);
+    });
+
+    // atualiza resultado de Cilindros
+    document.getElementById("resultado21").innerHTML =
+    resultados[1].length > 0
+        ? resultados[1].join(", ")
+        : "";
+
+    // atualiza resultado de Cristais
+    document.getElementById("resultado22").innerHTML =
+        resultados[2].length > 0
+            ? resultados[2].join(", ")
+            : "";
 
         document.getElementById("data1").innerHTML = dataAtual(); 
         await gerarPDF(); }
