@@ -140,7 +140,7 @@ textarea[name="mensagemGrande"] {
     font-family: "Ruda", sans-serif;
 }
 
-/*hora da coleta*/
+
 
 
 
@@ -154,7 +154,7 @@ textarea[name="mensagemGrande"] {
 fieldset { text-align: left;
 margin: auto;}
 
-#hora {
+#horario {
     width: 93%;
     font-size: 2rem;
   
@@ -300,7 +300,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Abstinência Sexual ?</legend>
-<input type="text" placeholder="Escolha ou digite" name="lista" id="lista91" list="lista911">
+<input type="text" placeholder="Escolha ou digite" name="lista" id="sexo" list="lista911">
       <label for="lista91"></label>
       <datalist id="lista911">
       <option>2 dias</option>
@@ -315,7 +315,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Vasectomizado ?</legend>
-<input type="text" placeholder="Escolha ou digite" name="lista" id="lista2" list="lista22">
+<input type="text" placeholder="Escolha ou digite" name="lista" id="vasec" list="lista22">
       <label for="lista2"></label>
       <datalist id="lista22">
       <option>Não</option>
@@ -325,7 +325,7 @@ margin: auto;}
 <br><br>
 
 <fieldset>
-  <label>Horário da coleta<br></label><input id="hora" type="time">
+  <label>Horário da coleta<br></label><input id="horario" type="time">
 </fieldset>
       <br><br>
 
@@ -337,10 +337,10 @@ margin: auto;}
 
 <fieldset>
   <legend>Cor</legend>
-<input type="text" placeholder="Escolha ou digite" name="lista" id="lista3" list="lista33">
+<input type="text" placeholder="Escolha ou digite" name="lista" id="cor" list="lista33">
       <label for="lista3"></label>
       <datalist id="lista33">
-      <option>Branco Opalescente</option>
+      <option>Branco opalescente</option>
       <option>Avermelhado</option>
       <option>Amarelado</option>
       </datalist>
@@ -350,7 +350,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Viscosidade</legend>
-<input type="text" placeholder="Escolha ou digite" name="lista" id="lista4" list="lista44">
+<input type="text" placeholder="Escolha ou digite" name="lista" id="visco" list="lista44">
       <label for="lista4"></label>
       <datalist id="lista44">
       <option>Reduzida</option>
@@ -362,7 +362,7 @@ margin: auto;}
 
 <fieldset>
   <legend>pH</legend>
- <input type="text" placeholder="Escolha ou digite" name="lista" id="lista5" list="lista55">
+ <input type="text" placeholder="Escolha ou digite" name="lista" id="pH" list="lista55">
       <label for="lista5"></label>
       <datalist id="lista55">
       <option>Anormal <= 7,1</option>
@@ -375,7 +375,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Liquefação</legend>
- <input type="text" placeholder="Escolha ou digite" name="lista" id="lista6" list="lista66">
+ <input type="text" placeholder="Escolha ou digite" name="lista" id="lique" list="lista66">
       <label for="lista6"></label>
       <datalist id="lista66">
       <option>Normal <= 30 min</option>
@@ -387,7 +387,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Leucócitos</legend>
- <input type="text" placeholder="Escolha ou digite" name="lista" id="lista7" list="lista77">
+ <input type="text" placeholder="Escolha ou digite" name="lista" id="leu" list="lista77">
       <label for="lista7"></label>
       <datalist id="lista77">
       <option>Normal <= 1.000/mm³</option>
@@ -399,7 +399,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Hemácias</legend>
- <input type="text" placeholder="Escolha ou digite" name="lista" id="lista8" list="lista88">
+ <input type="text" placeholder="Escolha ou digite" name="lista" id="hema" list="lista88">
       <label for="lista8"></label>
       <datalist id="lista88">
       <option>Normal <= 1.000/mm³</option>
@@ -410,7 +410,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Concentração de Espermatozoides</legend>
- <input type="text" placeholder="Escolha ou digite" name="lista" id="lista9" list="lista99">
+ <input type="text" placeholder="Escolha ou digite" name="lista" id="conc" list="lista99">
       <label for="lista9"></label>
       <datalist id="lista99">
       <option>Normal >= 15 milhões/mL</option>
@@ -421,7 +421,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Total Ejaculado</legend>
- <input type="text" placeholder="Escolha ou digite" name="lista" id="lista10" list="lista100">
+ <input type="text" placeholder="Escolha ou digite" name="lista" id="total" list="lista100">
       <label for="lista10"></label>
       <datalist id="lista100">
       <option>Normal >= 39 milhões</option>
@@ -432,8 +432,8 @@ margin: auto;}
 
       <fieldset class="amostra" data-numero="1">
   <legend>Morfologia da Cabeça</legend>
-<label><input type="checkbox" value="Normal >30%" data-amostra="1">Normal >30%</label>
-<label><input type="checkbox" value="Anormal <=30%" data-amostra="1">Anormal <=30%</label>
+<label><input type="checkbox" value="Normal >30%" data-amostra="1">Normal > 30%</label>
+<label><input type="checkbox" value="Anormal <=30%" data-amostra="1">Anormal <= 30%</label>
 <label><input type="checkbox" value="Acéfalos" data-amostra="1">Acéfalos</label>
 <label><input type="checkbox" value="Amorfos" data-amostra="1">Amorfos</label>
 <label><input type="checkbox" value="Bicéfalos" data-amostra="1">Bicéfalos</label>
@@ -449,8 +449,8 @@ margin: auto;}
 
 <fieldset class="amostra" data-numero="2">
   <legend>Morfologia da Peça Intermediária</legend>
-<label><input type="checkbox" value="Normal >30%" data-amostra="2">Normal >30%</label>
-<label><input type="checkbox" value="Anormal <=30%" data-amostra="2">Anormal <=30%</label>
+<label><input type="checkbox" value="Normal >30%" data-amostra="2">Normal > 30%</label>
+<label><input type="checkbox" value="Anormal <=30%" data-amostra="2">Anormal <= 30%</label>
 <label><input type="checkbox" value="Anômala" data-amostra="2">Anômala</label>
 <label><input type="checkbox" value="Dobrada" data-amostra="2">Dobrada</label>
 <label><input type="checkbox" value="Excesso de citoplasma" data-amostra="2">Excesso de citoplasma</label>
@@ -462,8 +462,8 @@ margin: auto;}
 
 <fieldset class="amostra" data-numero="3">
   <legend>Morfologia da Cauda</legend>
-<label><input type="checkbox" value="Normal >30%" data-amostra="3">Normal >30%</label>
-<label><input type="checkbox" value="Anormal <=30%" data-amostra="3">Anormal <=30%</label>
+<label><input type="checkbox" value="Normal >30%" data-amostra="3">Normal > 30%</label>
+<label><input type="checkbox" value="Anormal <=30%" data-amostra="3">Anormal <= 30%</label>
 <label><input type="checkbox" value="Curta" data-amostra="3">Curta</label>
 <label><input type="checkbox" value="Dobrada" data-amostra="3">Dobrada</label>
 <label><input type="checkbox" value="Enrolada" data-amostra="3">Enrolada</label>
@@ -473,18 +473,35 @@ margin: auto;}
 
 <fieldset class="amostra">
  <legend>Motilidade</legend>
-<label>A-Motilidade Progressiva:<input type="range" name="range1" id="range1" min="0" max="100" value="0" oninput="ival1.innerHTML = Number(range1.value)">
-<output id="ival1">0</output>%</label>
-<label>B-Motilidade Não Progressiva:<input type="range" name="range2" id="range2" min="0" max="100" value="0" oninput="ival2.innerHTML = Number(range2.value)">
-<output id="ival2">0</output>%</label>
-<label>C-Imóveis:<input type="range" name="range3" id="range3" min="0" max="100" value="0" oninput="ival3.innerHTML = Number(range3.value)">
-<output id="ival3">0</output>%</label>
+
+<label>
+A-Motilidade Progressiva:
+<input type="range" id="range1" min="0" max="100" value="0"
+oninput="document.getElementById('ival1').innerHTML = this.value">
+<output id="ival1">0</output>%
+</label>
+
+<label>
+B-Motilidade Não Progressiva:
+<input type="range" id="range2" min="0" max="100" value="0"
+oninput="document.getElementById('ival2').innerHTML = this.value">
+<output id="ival2">0</output>%
+</label>
+
+<label>
+C-Imóveis:
+<input type="range" id="range3" min="0" max="100" value="0"
+oninput="document.getElementById('ival3').innerHTML = this.value">
+<output id="ival3">0</output>%
+</label>
+
 </fieldset>
+
 <br><br>
 
 <fieldset>
   <legend>Vitalidade</legend>
- <input type="text" placeholder="Escolha ou digite" name="lista" id="lista11" list="lista111">
+ <input type="text" placeholder="Escolha ou digite" name="lista" id="vita" list="lista111">
       <label for="lista11"></label>
       <datalist id="lista111">
       <option>Normal > 50%</option>
@@ -529,17 +546,17 @@ margin: auto;}
    <tbody>
     <tr>
     <th id="nome">Abstinência sexual</th>
-      <td id="resultado2"></td>
+      <td id="sexoImpresso"></td>
       <td id="vr">2 até 7 dias</td>
     </tr>
     <tr>
      <th id="nome">Vasectomizado</th>
-      <td id="resultado3"></td>
+      <td id="vasecImpresso"></td>
       <td id="vr">N/A</td>
     </tr>
     <tr>
-      <th id="nome">Hora da coleta</th>
-      <td id="resultado1"></td>
+      <th id="nome">Horário da coleta</th>
+      <td id="horarioImpresso"></td>
       <td id="vr">N/A</td>
     </tr>
     <tr>
@@ -547,27 +564,27 @@ margin: auto;}
     </tr>
     <tr>
      <th id="nome">Volume</th>
-      <td id="resultado3"></td>
+      <td id="volumeImpresso"></td>
       <td id="vr">>= 1,5 mL</td>
     </tr>
     <tr>
      <th id="nome">Cor</th>
-      <td id="resultado3"></td>
+      <td id="corImpresso"></td>
       <td id="vr">Branco opalescente</td>
     </tr>
     <tr>
      <th id="nome">Viscosidade</th>
-      <td id="resultado3"></td>
+      <td id="viscoImpresso"></td>
       <td id="vr">Normal</td>
     </tr>
     <tr>
      <th id="nome">pH</th>
-      <td id="resultado3"></td>
+      <td id="pHImpresso"></td>
       <td id="vr">7,2 até 8,0</td>
     </tr>
     <tr>
      <th id="nome">Liquefação</th>
-      <td id="resultado3"></td>
+      <td id="liqueImpresso"></td>
       <td id="vr"><= 30 min</td>
     </tr>
     <tr>
@@ -575,57 +592,57 @@ margin: auto;}
     </tr>
     <tr>
      <th id="nome">Leucócitos</th>
-      <td id="resultado3"></td>
+      <td id="leuImpresso"></td>
       <td id="vr"><= 1.000/mm³</td>
     </tr>
     <tr>
      <th id="nome">Hemácias</th>
-      <td id="resultado3"></td>
+      <td id="hemaImpresso"></td>
       <td id="vr"><= 1.000/mm³</td>
     </tr>
     <tr>
      <th id="nome">Concentração de espermatozoides</th>
-      <td id="resultado3"></td>
+      <td id="concImpresso"></td>
       <td id="vr">>= 15 milhões/mL</td>
     </tr>
     <tr>
      <th id="nome">Total ejaculado</th>
-      <td id="resultado3"></td>
+      <td id="totalImpresso"></td>
       <td id="vr">>= 39 milhões</td>
     </tr>
     <tr>
      <th id="nome">Morfologia da cabeça</th>
-      <td id="resultado3"></td>
+      <td id="cabecaImpresso"></td>
       <td id="vr">> 30%</td>
     </tr>
     <tr>
      <th id="nome">Morfologia da peça intermediária</th>
-      <td id="resultado3"></td>
+      <td id="interImpresso"></td>
       <td id="vr">> 30%</td>
     </tr>
     <tr>
      <th id="nome">Morfologia da cauda</th>
-      <td id="resultado3"></td>
+      <td id="caudaImpresso"></td>
       <td id="vr">> 30%</td>
     </tr>
     <tr>
      <th id="nome">A-Motilidade progressiva</th>
-      <td id="resultado3"></td>
+      <td id="ival1Impresso"></td>
       <td id="vr">> 50%</td>
     </tr>
     <tr>
      <th id="nome">B-Motilidade não progressiva</th>
-      <td id="resultado3"></td>
+      <td id="ival2Impresso"></td>
       <td id="vr">N/A</td>
     </tr>
     <tr>
      <th id="nome">C-Imóveis</th>
-      <td id="resultado3"></td>
+      <td id="ival3Impresso"></td>
       <td id="vr">N/A</td>
     </tr>
     <tr>
      <th id="nome">Vitalidade</th>
-      <td id="resultado3"></td>
+      <td id="vitaImpresso"></td>
       <td id="vr">> 50%</td>
     </tr>
    </tbody>
@@ -678,52 +695,78 @@ async function gerarPDF() {
 
 <!-- função para pegar as infos da pagina principal e mandar para impressao em PDF, assim como adicionar a data. 
 e tambem tem o botao para apagar a pagina principal-->
+
 <script>
-async function salvar() {
+async function salvar() { 
 
-    // Informações da analise
-    document.getElementById("infoAnalise").innerHTML = "<strong>Informações da Análise:</strong> " + document.getElementById("msg").value;
+document.getElementById("infoAnalise").innerHTML = "<strong>Informações da Análise:</strong> " + document.getElementById("msg").value;
+document.getElementById("sexoImpresso").innerHTML = document.getElementById("sexo").value;
+document.getElementById("vasecImpresso").innerHTML = document.getElementById("vasec").value;
 
-    //logica para checkBox
-    const resultados = {
+const horario = document.getElementById("horario").value; // pega o valor do input de horario para mandar para o PDF
+const horarioFormatado = horario.replace(":", "h") + "min"; // para formatar o horário no formato desejado (ex: 14h30min)
+document.getElementById("horarioImpresso").textContent = horarioFormatado;
+
+document.getElementById("volumeImpresso").innerHTML = document.getElementById("volume").value;
+document.getElementById("corImpresso").innerHTML = document.getElementById("cor").value;
+document.getElementById("viscoImpresso").innerHTML = document.getElementById("visco").value;
+document.getElementById("pHImpresso").innerHTML = document.getElementById("pH").value;
+document.getElementById("liqueImpresso").innerHTML = document.getElementById("lique").value;   
+document.getElementById("leuImpresso").innerHTML = document.getElementById("leu").value;
+document.getElementById("hemaImpresso").innerHTML = document.getElementById("hema").value;
+document.getElementById("concImpresso").innerHTML = document.getElementById("conc").value;
+document.getElementById("totalImpresso").innerHTML = document.getElementById("total").value;
+document.getElementById("vitaImpresso").innerHTML = document.getElementById("vita").value;
+
+//logica para checkBox
+const resultados = {
         1: [],
         2: [],
-        3: []
+		    3: []
     };
 
     // pega todos os checkboxes marcados
     const marcados = document.querySelectorAll('input[type="checkbox"]:checked');
 
     marcados.forEach(cb => {
-        const amostra = cb.dataset.amostra; // 1, 2 ou 3
+        const amostra = cb.dataset.amostra; // 1 , 2 , 3
         resultados[amostra].push(cb.value);
     });
 
-    // atualiza resultado da Amostra 1
-    document.getElementById("resultado1").innerHTML =
+    // Morfologia da Cabeça
+    document.getElementById("cabecaImpresso").innerHTML =
     resultados[1].length > 0
         ? resultados[1].join(", ")
         : "";
 
-    // atualiza resultado da Amostra 2
-    document.getElementById("resultado2").innerHTML =
+    // Morfologia da Peça Intermediária
+    document.getElementById("interImpresso").innerHTML =
         resultados[2].length > 0
             ? resultados[2].join(", ")
             : "";
-
-    // atualiza resultado da Amostra 3
-    document.getElementById("resultado3").innerHTML =
+			
+	// Morfologia da Cauda
+    document.getElementById("caudaImpresso").innerHTML =
         resultados[3].length > 0
             ? resultados[3].join(", ")
             : "";
 
-    // data
-    document.getElementById("data1").innerHTML = dataAtual();
 
-    // gera PDF
-    await gerarPDF();
+//começo dos valores por range: progressiva
+document.getElementById("ival1Impresso").innerHTML =
+document.getElementById("ival1").textContent + "%";
+//não progressiva
+document.getElementById("ival2Impresso").innerHTML =
+document.getElementById("ival2").textContent + "%";
+//imóveis
+document.getElementById("ival3Impresso").innerHTML =
+document.getElementById("ival3").textContent + "%";
+
+
+document.getElementById("data1").innerHTML = dataAtual(); 
+        await gerarPDF()
 }
-
+   
 function dataAtual() {
     let Data = new Date();
 
