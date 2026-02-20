@@ -51,18 +51,20 @@ header img {
 
 header button {
   justify-self: center;
-  height: 40px;
-  width: 120px;
   border-radius: 6px;
   background-color: #EBEBEB;
   font-family: "Ruda", sans-serif;
 }
 
-#btnSalvar {
+#btnSalvar { 
+  height: 40px;
+  width: 100px;
   border-color:  #00FFF7;
 }
 
-#btnApagar {
+#btnApagar { 
+  height: 40px;
+  width: 100px;
   border-color: #F20039
 }
 
@@ -169,6 +171,8 @@ margin: auto;}
   gap: 20px;
   padding: 0;
   margin: 0;
+  border-bottom: 2px solid #0d0d0d;
+  margin-bottom: 30px;
 }
 
 .cabeca-esq img {
@@ -193,8 +197,10 @@ margin: auto;}
   font-weight: bold;
   font-size: 1.2rem;
   margin: 0; 
-  padding: 0;
-}
+  padding: 8px;
+   border: 1px solid #0d0d0d;
+   border-radius: 5px; 
+} 
 
 .for {
   color: #00FFF7; /* para pintar apenas as 3 letras do nome forLaudos */
@@ -218,13 +224,10 @@ margin: auto;}
       margin-bottom: 30px;
     }
 
-    #tituloExameImpresso {
+   #tituloExameImpresso {
   text-align: left; 
-  border-radius: 5px; 
-  border: 1px solid #EBEBEB; 
-  background-color: #EBEBEB;  
-  padding: 8px;  
-  border: 1px solid #0d0d0d;
+  border-radius: 5px;
+  padding: 8px; 
 }
 
     th, td {
@@ -300,7 +303,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Abstinência Sexual ?</legend>
-<input type="text" placeholder="Escolha ou digite" name="lista" id="sexo" list="lista911">
+<input type="text" placeholder="" name="lista" id="sexo" list="lista911">
       <label for="lista91"></label>
       <datalist id="lista911">
       <option>2 dias</option>
@@ -315,7 +318,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Vasectomizado ?</legend>
-<input type="text" placeholder="Escolha ou digite" name="lista" id="vasec" list="lista22">
+<input type="text" placeholder="" name="lista" id="vasec" list="lista22">
       <label for="lista2"></label>
       <datalist id="lista22">
       <option>Não</option>
@@ -331,13 +334,13 @@ margin: auto;}
 
 <fieldset>
 <label>Volume<br></label>
-<input id="volume" type="text" placeholder="Digite">
+<input id="volume" type="text" placeholder="Digite o volume em mL">
 </fieldset>
 <br><br>
 
 <fieldset>
   <legend>Cor</legend>
-<input type="text" placeholder="Escolha ou digite" name="lista" id="cor" list="lista33">
+<input type="text" placeholder="" name="lista" id="cor" list="lista33">
       <label for="lista3"></label>
       <datalist id="lista33">
       <option>Branco opalescente</option>
@@ -350,7 +353,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Viscosidade</legend>
-<input type="text" placeholder="Escolha ou digite" name="lista" id="visco" list="lista44">
+<input type="text" placeholder="" name="lista" id="visco" list="lista44">
       <label for="lista4"></label>
       <datalist id="lista44">
       <option>Reduzida</option>
@@ -362,7 +365,7 @@ margin: auto;}
 
 <fieldset>
   <legend>pH</legend>
- <input type="text" placeholder="Escolha ou digite" name="lista" id="pH" list="lista55">
+ <input type="text" placeholder="" name="lista" id="pH" list="lista55">
       <label for="lista5"></label>
       <datalist id="lista55">
       <option>Anormal <= 7,1</option>
@@ -375,7 +378,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Liquefação</legend>
- <input type="text" placeholder="Escolha ou digite" name="lista" id="lique" list="lista66">
+ <input type="text" placeholder="" name="lista" id="lique" list="lista66">
       <label for="lista6"></label>
       <datalist id="lista66">
       <option>Normal <= 30 min</option>
@@ -387,7 +390,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Leucócitos</legend>
- <input type="text" placeholder="Escolha ou digite" name="lista" id="leu" list="lista77">
+ <input type="text" placeholder="" name="lista" id="leu" list="lista77">
       <label for="lista7"></label>
       <datalist id="lista77">
       <option>Normal <= 1.000/mm³</option>
@@ -399,7 +402,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Hemácias</legend>
- <input type="text" placeholder="Escolha ou digite" name="lista" id="hema" list="lista88">
+ <input type="text" placeholder="" name="lista" id="hema" list="lista88">
       <label for="lista8"></label>
       <datalist id="lista88">
       <option>Normal <= 1.000/mm³</option>
@@ -410,7 +413,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Concentração de Espermatozoides</legend>
- <input type="text" placeholder="Escolha ou digite" name="lista" id="conc" list="lista99">
+ <input type="text" placeholder="" name="lista" id="conc" list="lista99">
       <label for="lista9"></label>
       <datalist id="lista99">
       <option>Normal >= 15 milhões/mL</option>
@@ -421,7 +424,7 @@ margin: auto;}
 
 <fieldset>
   <legend>Total Ejaculado</legend>
- <input type="text" placeholder="Escolha ou digite" name="lista" id="total" list="lista100">
+ <input type="text" placeholder="" name="lista" id="total" list="lista100">
       <label for="lista10"></label>
       <datalist id="lista100">
       <option>Normal >= 39 milhões</option>
@@ -501,7 +504,7 @@ oninput="document.getElementById('ival3').innerHTML = this.value">
 
 <fieldset>
   <legend>Vitalidade</legend>
- <input type="text" placeholder="Escolha ou digite" name="lista" id="vita" list="lista111">
+ <input type="text" placeholder="" name="lista" id="vita" list="lista111">
       <label for="lista11"></label>
       <datalist id="lista111">
       <option>Normal > 50%</option>
@@ -533,11 +536,11 @@ oninput="document.getElementById('ival3').innerHTML = this.value">
 </div>
   <table>  <!--tabela que vai receber as informações para gerar o PDF-->
     <caption>
-     <strong id="tituloExameImpresso">Espermograma</strong>
+     <strong id="tituloExameImpresso">ESPERMOGRAMA</strong>
     </caption>
       <thead>
     <tr>
-      <th id="nome"><strong>ANAMNESE</strong></th>
+      <th id="nome"><strong>Anamnese</strong></th>
       <th id="resultado">Resultado</th>
       <th id="vr1">Valor de Referência</th>
     </tr>
@@ -560,7 +563,7 @@ oninput="document.getElementById('ival3').innerHTML = this.value">
       <td id="vr">N/A</td>
     </tr>
     <tr>
-     <th id="nome"><strong>MACROSCOPIA</strong></th>
+     <th id="nome"><strong>Macroscopia</strong></th>
     </tr>
     <tr>
      <th id="nome">Volume</th>
@@ -588,7 +591,7 @@ oninput="document.getElementById('ival3').innerHTML = this.value">
       <td id="vr"><= 30 min</td>
     </tr>
     <tr>
-     <th id="nome"><strong>MICROSCOPIA</strong></th>
+     <th id="nome"><strong>Microscopia</strong></th>
     </tr>
     <tr>
      <th id="nome">Leucócitos</th>
