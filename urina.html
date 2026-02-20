@@ -51,18 +51,20 @@ header img {
 
 header button {
   justify-self: center;
-  height: 40px;
-  width: 120px;
   border-radius: 6px;
   background-color: #EBEBEB;
   font-family: "Ruda", sans-serif;
 }
 
-#btnSalvar {
+#btnSalvar { 
+  height: 40px;
+  width: 100px;
   border-color:  #00FFF7;
 }
 
-#btnApagar {
+#btnApagar { 
+  height: 40px;
+  width: 100px;
   border-color: #F20039
 }
 
@@ -156,6 +158,8 @@ margin: auto;}
   gap: 20px;
   padding: 0;
   margin: 0;
+  border-bottom: 2px solid #0d0d0d;
+  margin-bottom: 30px;
 }
 
 .cabeca-esq img {
@@ -180,8 +184,10 @@ margin: auto;}
   font-weight: bold;
   font-size: 1.2rem;
   margin: 0; 
-  padding: 0;
-}
+  padding: 8px;
+   border: 1px solid #0d0d0d;
+   border-radius: 5px; 
+} 
 
 .for {
   color: #00FFF7; /* para pintar apenas as 3 letras do nome forLaudos */
@@ -207,11 +213,8 @@ margin: auto;}
 
     #tituloExameImpresso {
   text-align: left; 
-  border-radius: 5px; 
-  border: 1px solid #EBEBEB; 
-  background-color: #EBEBEB;  
-  padding: 8px;  
-  border: 1px solid #0d0d0d;
+  border-radius: 5px;
+  padding: 8px; 
 }
 
     th, td {
@@ -283,9 +286,9 @@ margin: auto;}
 
       <textarea name="mensagemGrande" id="msg" rows="5" placeholder="Informações da Análise"></textarea>
       <br><br>
-      <label></label><input type="text" id="txt" placeholder="Digite o volume" required>
+      <label></label><input type="text" id="txt" placeholder="Digite o volume em mL" required>
       <br><br>
-      <input type="text" placeholder="Cor - escolha ou digite" name="lista" id="lista91" list="lista911">
+      <input type="text" placeholder="Cor" name="lista" id="lista91" list="lista911">
       <label for="lista91"></label>
       <datalist id="lista911">
       <option>Acastanhada</option>
@@ -300,7 +303,7 @@ margin: auto;}
       <option>Medicamentosa</option>
       </datalist>
       <br><br>
-      <input type="text" placeholder="Aspecto - escolha ou digite" name="lista" id="lista2" list="lista22">
+      <input type="text" placeholder="Aspecto" name="lista" id="lista2" list="lista22">
       <label for="lista2"></label>
       <datalist id="lista22">
       <option>Límpido</option>
@@ -309,7 +312,7 @@ margin: auto;}
       <option>Sanguinolento</option>
       </datalist>
       <br><br>
-      <input type="text" placeholder="Densidade - escolha ou digite" name="lista" id="lista3" list="lista33">
+      <input type="text" placeholder="Densidade" name="lista" id="lista3" list="lista33">
       <label for="lista3"></label>
       <datalist id="lista33">
       <option>Hipostenúria <=1.009</option>
@@ -318,7 +321,7 @@ margin: auto;}
       <option>Hiperestenúria >=1.026</option>
       </datalist>
       <br><br>
-      <input type="text" placeholder="pH - escolha ou digite" name="lista" id="lista4" list="lista44">
+      <input type="text" placeholder="pH" name="lista" id="lista4" list="lista44">
       <label for="lista4"></label>
       <datalist id="lista44">
       <option>Anormal <=4,4</option>
@@ -326,7 +329,7 @@ margin: auto;}
       <option>Anormal >=8,1</option>
       </datalist>
       <br><br>
-      <input type="text" placeholder="Glicose - escolha ou digite" name="lista" id="lista5" list="lista55">
+      <input type="text" placeholder="Glicose" name="lista" id="lista5" list="lista55">
       <label for="lista5"></label>
       <datalist id="lista55">
       <option>Negativo</option>
@@ -337,7 +340,7 @@ margin: auto;}
       <option>Positivo ++++</option>
       </datalist>
       <br><br>
-      <input type="text" placeholder="Proteínas - escolha ou digite" name="lista" id="lista6" list="lista66">
+      <input type="text" placeholder="Proteínas" name="lista" id="lista6" list="lista66">
       <label for="lista6"></label>
       <datalist id="lista66">
       <option>Negativo</option>
@@ -348,7 +351,7 @@ margin: auto;}
       <option>Positivo ++++</option>
       </datalist>
       <br><br>
-      <input type="text" placeholder="Cetonas - escolha ou digite" name="lista" id="lista7" list="lista77">
+      <input type="text" placeholder="Cetonas" name="lista" id="lista7" list="lista77">
       <label for="lista7"></label>
       <datalist id="lista77">
       <option>Negativo</option>
@@ -359,7 +362,7 @@ margin: auto;}
       <option>Positivo ++++</option>
       </datalist>
       <br><br>
-      <input type="text" placeholder="Sangue - escolha ou digite" name="lista" id="lista8" list="lista88">
+      <input type="text" placeholder="Sangue" name="lista" id="lista8" list="lista88">
       <label for="lista8"></label>
       <datalist id="lista88">
       <option>Negativo</option>
@@ -370,7 +373,7 @@ margin: auto;}
       <option>Positivo ++++</option>
       </datalist>
       <br><br>
-      <input type="text" placeholder="Esterase leucocitária - escolha ou digite" name="lista" id="lista9" list="lista99">
+      <input type="text" placeholder="Esterase leucocitária" name="lista" id="lista9" list="lista99">
       <label for="lista9"></label>
       <datalist id="lista99">
       <option>Negativo</option>
@@ -381,14 +384,14 @@ margin: auto;}
       <option>Positivo ++++</option>
       </datalist>
        <br><br>
-      <input type="text" placeholder="Nitrito - Escolha ou digite" name="lista" id="lista10" list="lista100">
+      <input type="text" placeholder="Nitrito" name="lista" id="lista10" list="lista100">
       <label for="lista10"></label>
       <datalist id="lista100">
       <option>Negativo</option>
       <option>Positivo +</option>
       </datalist>
        <br><br>
-      <input type="text" placeholder="Bilirrubinas - Escolha ou digite" name="lista" id="lista11" list="lista111">
+      <input type="text" placeholder="Bilirrubinas" name="lista" id="lista11" list="lista111">
       <label for="lista11"></label>
       <datalist id="lista111">
       <option>Negativo</option>
@@ -399,35 +402,35 @@ margin: auto;}
       <option>Positivo ++++</option>
       </datalist>
       <br><br>
-      <input type="text" placeholder="Urobilinogênio - Escolha ou digite" name="lista" id="lista12" list="lista112">
+      <input type="text" placeholder="Urobilinogênio" name="lista" id="lista12" list="lista112">
       <label for="lista12"></label>
       <datalist id="lista112">
       <option>Normal <=1.0</option>
       <option>Anormal >=1.1</option>
       </datalist>
       <br><br>
-      <input type="text" placeholder="Células epiteliais - Escolha ou digite" name="lista" id="lista13" list="lista113">
+      <input type="text" placeholder="Células epiteliais" name="lista" id="lista13" list="lista113">
       <label for="lista13"></label>
       <datalist id="lista113">
       <option>Normal <=24.000 mL</option>
       <option>Anormal >24.000 mL</option>
       </datalist>
       <br><br>
-      <input type="text" placeholder="Hemácias - Escolha ou digite" name="lista" id="lista14" list="lista114">
+      <input type="text" placeholder="Hemácias" name="lista" id="lista14" list="lista114">
       <label for="lista14"></label>
       <datalist id="lista114">
       <option>Normal <=10.000 mL</option>
       <option>Anormal >10.000 mL</option>
       </datalist>
       <br><br>
-      <input type="text" placeholder="Leucócitos - Escolha ou digite" name="lista" id="lista15" list="lista115">
+      <input type="text" placeholder="Leucócitos" name="lista" id="lista15" list="lista115">
       <label for="lista15"></label>
       <datalist id="lista115">
       <option>Normal <=10.000 mL</option>
       <option>Anormal >10.000 mL</option>
       </datalist>
        <br><br>
-      <input type="text" placeholder="Bactérias - Escolha ou digite" name="lista" id="lista16" list="lista116">
+      <input type="text" placeholder="Bactérias" name="lista" id="lista16" list="lista116">
       <label for="lista16"></label>
       <datalist id="lista116">
       <option>Ausente</option>
@@ -437,7 +440,7 @@ margin: auto;}
       <option>Presente ++++</option>
       </datalist>
       <br><br>
-      <input type="text" placeholder="Fungos - Escolha ou digite" name="lista" id="lista17" list="lista117">
+      <input type="text" placeholder="Fungos" name="lista" id="lista17" list="lista117">
       <label for="lista17"></label>
       <datalist id="lista117">
       <option>Ausente</option>
@@ -445,7 +448,7 @@ margin: auto;}
       <option>Hífas</option>
       </datalist>
       <br><br>
-      <input type="text" placeholder="Protozoários - Escolha ou digite" name="lista" id="lista18" list="lista118">
+      <input type="text" placeholder="Protozoários" name="lista" id="lista18" list="lista118">
       <label for="lista18"></label>
       <datalist id="lista118">
       <option>Ausente</option>
@@ -454,14 +457,14 @@ margin: auto;}
       <option>Larvas</option>
       </datalist>
       <br><br>
-      <input type="text" placeholder="Espermatozoides - Escolha ou digite" name="lista" id="lista19" list="lista119">
+      <input type="text" placeholder="Espermatozoides" name="lista" id="lista19" list="lista119">
       <label for="lista19"></label>
       <datalist id="lista119">
       <option>Ausente</option>
       <option>Presente</option>
       </datalist>
         <br><br>
-      <input type="text" placeholder="Muco - Escolha ou digite" name="lista" id="lista20" list="lista200">
+      <input type="text" placeholder="Muco" name="lista" id="lista20" list="lista200">
       <label for="lista20"></label>
       <datalist id="lista200">
       <option>Ausente</option>
@@ -519,11 +522,11 @@ margin: auto;}
 </div>
   <table>  <!--tabela que vai receber as informações para gerar o PDF-->
     <caption>
-     <strong id="tituloExameImpresso">Urina Tipo 1</strong>
+     <strong id="tituloExameImpresso">URINA TIPO 1</strong>
     </caption>
       <thead>
     <tr>
-      <th id="nome"><strong>ANÁLISE FÍSICA</strong></th>
+      <th id="nome"><strong>Análise Física</strong></th>
       <th id="resultado">Resultado</th>
       <th id="vr1">Valor de Referência</th>
     </tr>
@@ -551,7 +554,7 @@ margin: auto;}
       <td id="vr">1.010 até 1.030</td>
     </tr>
     <tr>
-     <th id="nome"><strong>ANÁLISE QUÍMICA</strong></th>
+     <th id="nome"><strong>Análise Química</strong></th>
     </tr>
     <tr>
      <th id="nome">pH</th>
@@ -599,7 +602,7 @@ margin: auto;}
       <td id="vr"><=1.0 mg/dL</td>
     </tr>
     <tr>
-     <th id="nome"><strong>SEDIMENTOSCOPIA</strong></th>
+     <th id="nome"><strong>Sedimentoscopia</strong></th>
     </tr>
     <tr>
      <th id="nome">Células Epiteliais</th>
