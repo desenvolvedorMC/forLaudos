@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leucograma</title>
+  <link rel="shortcut icon" href="iconeSEMBG.png" type="image/x-icon">
+</head>
+<body>
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap');  /* biblioteca de fonte do google */
+
+
+    /* aqui começa o código da pagina que carrega inicialmente */
+    body {
+      margin: 0px;
+      padding: 0px;
+      background-color: #EBEBEB;
+      color: #333;
+      }
+
+header { 
+
+  height: 100px;
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* esquerda | centro | direita */
+  align-items: center;
+  
+  background-color: #5e6e6e7e;
+  padding: 10px 20px;
+  margin: 10px;
+  margin-top: 4px;
+  margin-bottom: -22px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.6);
+}
+
+header img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+header button {
+  justify-self: center;
+  height: 40px;
+  width: 120px;
+  border-radius: 6px;
+  background-color: #EBEBEB;
+  font-family: "Ruda", sans-serif;
+}
+
+#btnSalvar {
+  border-color:  #00FFF7;
+}
+
+#btnApagar {
+  border-color: #F20039
+}
+
+      main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 20px;
+      margin-bottom: -20px;
+      min-width: 90%;
+    font-family: "Ruda", sans-serif;}
+
+.card {
+      background-color: white;
+      width: 89%;
+      height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 22px;
+      margin: 22px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      text-align: center;
+      line-height: 2em;
+  }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      width: 30%;
+      height: 8px;
+      background-color: #00FFF7;
+      top: 0;
+      right: 0;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 10px; }
+ 
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin-top: 20px;
+      color: #0d0d0d;
+      text-align: center;
+    text-indent: 0px;
+  text-decoration: underline; }
+
+
+      footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 1rem;
+      margin-bottom: -100px;
+    font-family: "Ruda", sans-serif;}
+
+    #email { color: #5e6e6e7e; }
+    #email:hover { color: #00FFF7; }
+
+    input[type="text"] {
+    width: 90%;
+    padding: 8px;
+    font-size: 1rem;
+    font-family: "Ruda", sans-serif;
+}
+
+textarea[name="mensagemGrande"] {
+    width: 90%;
+    padding: 8px;
+    font-size: 1rem;
+    text-align: center;
+    font-family: "Ruda", sans-serif;
+}
+
+
+/* aqui começa o código da contagem diferencial de leucócitos */
+.total{
+    margin-top:15px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.total.ok{
+    color:#00FFF7;
+}
+
+.total.erro{
+    color:#0d0d0d; }
+
+fieldset { text-align: left;
+margin: auto;}
+
+input[type="number"] {
+    width: 95%;
+    padding: 8px;
+    font-size: 1rem;
+    font-family: "Ruda", sans-serif;
+}
+
+#total {
+  
+   font-family: "Ruda", sans-serif;
+}
+
+#outrasCeluas {
+  justify-self: center;
+  height: 40px;
+  width: 120px;
+  border-radius: 6px;
+  background-color: #EBEBEB;
+  font-family: "Ruda", sans-serif;
+ 
+}
+
+.input-group {
+  margin-bottom: 60px; /* espaço entre células quando aperta o botão "Outras Células" */
+}
+
+
+
+/* aqui começa o código da impressão */
+
+.cabeca {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #0d0d0d;
+  margin-bottom: 30px;
+ 
+}
+
+.cabeca-esq img {
+  width: 130px;
+  height: 130px;
+
+}
+
+.cabeca-dir {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.linha-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#forlaudos {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0; 
+  padding: 8px;
+   border: 1px solid #0d0d0d;
+   border-radius: 5px; 
+}
+
+.for {
+  color: #00FFF7; /* para pintar apenas as 3 letras do nome forLaudos */
+}
+
+#infoAnalise {
+  margin: 6px 0 0 0;
+  font-size: 0.95rem;
+}
+
+
+ table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 200px;
+  margin: 0;
+}
+
+    caption {
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    #tituloExameImpresso {
+  text-align: left; 
+  border-radius: 5px;
+  padding: 8px; 
+}
+
+    th, td {
+      border: 1px solid #EBEBEB; /* cor da linha da tabela impressa */
+      padding: 8px;
+      text-align: center;
+      border-radius: 5px; 
+    }
+
+
+
+
+
+#nome { text-align: left; }
+#resultado { text-align: center; }
+#vr { text-align: right; }
+#vr1 { text-align: right; }
+
+/* aqui e o tamanho da pagina na hora do print, tambem mostra ou nao o display junto com a primeira pagina ao carregar */
+
+.print {
+    width: 794px;   /* largura fixa padrão A4 em pixels */
+    min-height: 1123px; /* altura A4 */
+    background: white;
+    box-sizing: border-box;
+    padding: 25px 25px 20px 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: none;
+    background: white;
+    margin: 0 auto;
+    
+}
+
+ @media print {
+            .print {
+                display: block;
+            }
+            .card {
+                display: none;
+            }
+            .header1 {
+                display: none;
+            }
+            .footer1 {
+                display: none;
+            }
+             .head {
+                display: none;
+            }
+        }
+
+       
+    </style>
+
+
+
+     <header class="header1">
+  <a href="https://wa.me/?text=https://desenvolvedormc.github.io/forLaudos/" target="_blank">
+  <img src="iconeSEMBG.png" height="100px" width="100px" alt="ícone"></a> <!--quando clicar no logo aparece para compartilhar pelo whatsApp-->
+  <button id="btnSalvar" onclick="salvar()">Salvar</button>
+  <button id="btnApagar" onclick="apagar()">Apagar</button>
+     </header>
+
+
+
+     <main>  <!--aqui começa o corpo da pagina principal-->
+    <div class="card">
+  <h2>Contagem Diferencial de Leucócitos %</h2>
+
+  <textarea name="mensagemGrande" id="msg" rows="5" placeholder="Informações da Análise"></textarea>
+  <br><br>
+
+  <div class="container">
+
+    <div id="campos">
+
+      <div class="input-group">
+    <fieldset>
+        <legend>Leucócitos Totais (mm³)</legend>
+        <input type="number" id="leucocitosTotais">
+    </fieldset>
+    </div>
+
+
+
+        <div class="input-group">
+          <fieldset> <legend>Neutrófilos</legend>
+            <input type="number" min="0" max="100" class="celula">
+            </fieldset>
+        </div>
+<div class="input-group">
+          <fieldset> <legend>Bastonetes</legend>
+            <input type="number" min="0" max="100" class="celula">
+            </fieldset>
+        </div>
+        <div class="input-group">
+          <fieldset> <legend>Segmentados</legend>
+            <input type="number" min="0" max="100" class="celula">
+            </fieldset>
+        </div>
+        <div class="input-group">
+          <fieldset> <legend>Blastos</legend>
+            <input type="number" min="0" max="100" class="celula">
+            </fieldset>
+        </div>
+        <div class="input-group">
+          <fieldset> <legend>Promielócitos</legend>
+            <input type="number" min="0" max="100" class="celula">
+            </fieldset>
+        </div>
+        <div class="input-group">
+          <fieldset> <legend>Mielócitos</legend>
+            <input type="number" min="0" max="100" class="celula">
+            </fieldset>
+        </div>
+        <div class="input-group">
+          <fieldset> <legend>Metamielócitos</legend>
+            <input type="number" min="0" max="100" class="celula">
+            </fieldset>
+        </div>
+
+
+
+        <div class="input-group">
+          <fieldset> <legend>Eosinófilos</legend>
+            <input type="number" min="0" max="100" class="celula">
+            </fieldset>
+        </div>
+
+        <div class="input-group">
+          <fieldset> <legend>Basófilos</legend>
+            <input type="number" min="0" max="100" class="celula">
+            </fieldset>
+        </div>
+
+        <div class="input-group">
+          <fieldset> <legend>Linfócitos</legend>
+            <input type="number" min="0" max="100" class="celula">
+            </fieldset>
+        </div>
+        <div class="input-group">
+          <fieldset> <legend>Linfócitos Típicos</legend>
+            <input type="number" min="0" max="100" class="celula">
+            </fieldset>
+        </div>
+        <div class="input-group">
+          <fieldset> <legend>Linfócitos Atípicos</legend>
+            <input type="number" min="0" max="100" class="celula">
+            </fieldset>
+        </div>
+
+
+
+        <div class="input-group">
+          <fieldset> <legend>Monócitos</legend>
+            <input type="number" min="0" max="100" class="celula">
+            </fieldset>
+        </div>
+
+    </div>
+  
+    <button id="outrasCeluas" type="button" class="add-btn" onclick="adicionarCampo()">Outras Células</button>
+
+    <div id="total" class="total">Contagem diferencial: 0%</div>
+</div>
+
+</div>
+
+
+
+
+    <div class="print">   <!--aqui inicia as configurações para imprimir PDF-->
+
+      <div class="cabeca">
+  <div class="cabeca-esq">
+    <img src="data:image/png;base64,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" 
+    alt="QR Code" crossorigin="anonymous"> <!-- a imagem de QRCODE teve que ser covertida no site do base64 para poder ser exportada no PDF-->
+  </div>
+
+ 
+  <div class="cabeca-dir">  <!--cabeçalho do laudo-->
+    <div class="linha-topo">
+      <span id="forlaudos">
+      <span class="for">for</span>Laudos</span> <!--para conseguir pintar as apenas 3 letras da palavra-->
+      <span id="data2">Data: <span id="data1"></span></span>
+    </div>
+    <div id="infoAnalise">Informações da Análise</div>
+
+  </div>
+</div>
+  <table>  <!--tabela que vai receber as informações para gerar o PDF-->
+    <caption>
+     <strong id="tituloExameImpresso">LEUCOGRAMA</strong>
+    </caption>
+      <thead>
+    <tr>
+      <th id="nome"><Strong>Células Analisadas</Strong></th> <!--essa parte usa SIM-->
+      <th id="resultado">Resultado</th>
+      <th id="vr1">Valor de Referência<br>(média para adulto)</th>
+    </tr>
+   </thead>
+
+   <tbody>
+    <!--essa parte nao estou usando porque ta pegando a logica pelo script da variavel abaixo-->
+    
+  </table>
+    </div>
+    </main>
+    
+
+
+ <footer class="footer1">
+<a id="email" href="mailto:desenvolvedor.mc@gmail.com">desenvolvedor.mc@gmail.com</a> <!-- mandar e-mail quando clica no link-->
+  </footer>
+  
+  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script> <!-- biblioteca para gerar pdf-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!-- biblioteca para gerar pdf-->
+
+
+<!-- função para contagem das celulas-->
+<script>
+
+const totalDiv = document.getElementById("total");
+const botao = document.getElementById("btnSalvar");
+const containerCampos = document.getElementById("campos");
+
+function calcularTotal() {
+    const inputs = document.querySelectorAll(".celula");
+    let soma = 0;
+
+    inputs.forEach(input => {
+        soma += Number(input.value) || 0;
+    });
+
+    totalDiv.textContent = "Total: " + soma + "%";
+
+    if (soma === 100) {
+        totalDiv.classList.remove("erro");
+        totalDiv.classList.add("ok");
+        botao.disabled = false;
+    } else {
+        totalDiv.classList.remove("ok");
+        totalDiv.classList.add("erro");
+        botao.disabled = true;
+    }
+
+    if (soma > 100) {
+        alert("A soma não pode ultrapassar 100%");
+    }
+}
+
+function adicionarCampo() {
+
+    const nome = prompt("Nova célula:");
+    if (!nome) return;
+
+    const div = document.createElement("div");
+    div.classList.add("input-group");
+
+    div.innerHTML = `<fieldset><legend>${nome}</legend><input type="number" min="0" max="100" class="celula"></fieldset>`;
+
+    containerCampos.appendChild(div);
+
+    div.querySelector("input").addEventListener("input", calcularTotal);
+}
+
+document.addEventListener("input", function(e) {
+    if (e.target.classList.contains("celula")) {
+        calcularTotal();
+    }
+});
+
+</script>
+
+
+<!-- função para gerar PDF-->
+<Script> 
+async function gerarPDF() {
+
+    const elemento = document.querySelector(".print");
+
+    elemento.style.display = "block";
+
+    const canvas = await html2canvas(elemento, {
+        scale: 2,
+        useCORS: true,
+        windowWidth: 794,      // força largura fixa
+        windowHeight: 1123     // força altura fixa
+    });
+
+    const imgData = canvas.toDataURL("image/jpeg", 1.0);
+
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF("p", "mm", "a4");
+
+    const pageWidth = 210;
+    const pageHeight = 297;
+
+    pdf.addImage(imgData, "JPEG", 0, 0, pageWidth, pageHeight);
+    pdf.save("forLaudos.pdf");
+
+    elemento.style.display = "none";
+}
+
+    </Script>
+
+
+
+<!-- função para pegar as infos da pagina principal e mandar para impressao em PDF, assim como adicionar a data. 
+ e tambem tem o botao para apagar a pagina principal-->
+<script>
+
+  // essa parte define vr de forma dinâmica
+const valoresReferencia = {
+
+    "Leucócitos Totais (mm³)": { min: 4000, max: 11000, tipo: "absoluto" },
+
+    // Neutrófilos totais (segmentados + bastonetes)
+    "Neutrófilos": { min: 40, max: 70, tipo: "percentual" },
+
+    // Bastonetes (neutrófilos jovens)
+    "Bastonetes": { min: 0, max: 5, tipo: "percentual" },
+
+    // Segmentados (principal fração dos neutrófilos)
+    "Segmentados": { min: 40, max: 70, tipo: "percentual" },
+
+    // Células imaturas – normalmente AUSENTES no adulto saudável
+    "Blastos": { min: 0, max: 0, tipo: "percentual" },
+
+    "Promielócitos": { min: 0, max: 0, tipo: "percentual" },
+
+    "Mielócitos": { min: 0, max: 0, tipo: "percentual" },
+
+    "Metamielócitos": { min: 0, max: 1, tipo: "percentual" },
+
+    // Demais leucócitos
+    "Eosinófilos": { min: 1, max: 5, tipo: "percentual" },
+
+    "Basófilos": { min: 0, max: 1, tipo: "percentual" },
+
+    "Linfócitos": { min: 20, max: 40, tipo: "percentual" },
+
+    // Linfócitos típicos fazem parte do total de linfócitos
+    "Linfócitos Típicos": { min: 20, max: 40, tipo: "percentual" },
+
+    // Atípicos normalmente ausentes
+    "Linfócitos Atípicos": { min: 0, max: 0, tipo: "percentual" },
+
+    "Monócitos": { min: 2, max: 10, tipo: "percentual" }
+
+};
+
+
+
+        async function salvar() { 
+document.getElementById("infoAnalise").innerHTML = "<strong>Informações da Análise:</strong> " + document.getElementById("msg").value; // ja existia antes do ajuste pelo chatGPT
+
+// Pega tbody da tabela impressa
+  const tbody = document.querySelector(".print tbody");
+
+  // Limpa antes de recriar
+  tbody.innerHTML = "";
+
+  // Pega todos os grupos de input
+  const grupos = document.querySelectorAll("#campos .input-group");
+
+  grupos.forEach(grupo => {
+
+    const nomeCelula = grupo.querySelector("legend").textContent;
+const input = grupo.querySelector("input");
+
+const totalLeuco = Number(document.getElementById("leucocitosTotais").value) || 0;
+
+let valorFinal = "";
+
+let vrTexto = "-";
+
+const referencia = valoresReferencia[nomeCelula];
+
+if (referencia) {
+
+    if (referencia.tipo === "absoluto") {
+
+        vrTexto = referencia.min.toLocaleString("pt-BR") + 
+                  " – " + 
+                  referencia.max.toLocaleString("pt-BR") + 
+                  " mm³";
+
+    } else if (referencia.tipo === "percentual") {
+
+        let vrPercentual = referencia.min + 
+                           " – " + 
+                           referencia.max + 
+                           " %";
+
+        if (totalLeuco > 0) {
+
+            const minAbs = (referencia.min * totalLeuco) / 100;
+            const maxAbs = (referencia.max * totalLeuco) / 100;
+
+            vrPercentual += ", " +
+                minAbs.toLocaleString("pt-BR") +
+                " – " +
+                maxAbs.toLocaleString("pt-BR") +
+                " mm³";
+        }
+
+        vrTexto = vrPercentual;
+    }
+}
+
+
+// 🔹 Se for Leucócitos Totais → NÃO coloca %
+if (input.id === "leucocitosTotais") {
+
+    valorFinal = (Number(input.value) || 0).toLocaleString("pt-BR") + " mm³";
+
+} else {
+
+    const valorPercentual = Number(input.value) || 0;
+
+    valorFinal = valorPercentual + "%";
+
+    if (totalLeuco > 0 && valorPercentual > 0) {
+        const valorAbsoluto = (valorPercentual * totalLeuco) / 100;
+        valorFinal = valorPercentual + "%, " + 
+                     valorAbsoluto.toLocaleString("pt-BR") + " mm³";
+    }
+}
+
+    // Cria nova linha
+    const tr = document.createElement("tr");
+
+    tr.innerHTML = `
+     <th id="nome">${nomeCelula}</th>
+  <td>${valorFinal}</td>
+  <td id="vr">${vrTexto}</td>
+    `;
+
+    tbody.appendChild(tr);
+  });
+
+  // Mostra área de impressão
+  document.querySelector(".print").style.display = "block";
+
+
+
+        document.getElementById("data1").innerHTML = dataAtual(); // ja existia antes do ajuste pelo chatGPT
+        await gerarPDF(); // ja existia antes do ajuste pelo chatGPT
+      }
+
+// ===== LEUCÓCITOS TOTAIS =====
+const leucocitosTotaisInput = document.getElementById("leucocitosTotais");
+
+function converterParaAbsoluto() {
+    const totalLeuco = Number(leucocitosTotaisInput.value) || 0;
+    const inputs = document.querySelectorAll(".celula");
+
+    inputs.forEach(input => {
+        const percentual = Number(input.value) || 0;
+
+        // cria campo de resultado se não existir
+        let resultado = input.parentElement.querySelector(".valor-absoluto");
+
+        if (!resultado) {
+            resultado = document.createElement("small");
+            resultado.classList.add("valor-absoluto");
+            resultado.style.marginLeft = "10px";
+            resultado.style.fontWeight = "600";
+            input.parentElement.appendChild(resultado);
+        }
+
+        if (percentual > 0 && totalLeuco > 0) {
+            const absoluto = (percentual * totalLeuco) / 100;
+            resultado.textContent = percentual + "%, " + absoluto.toFixed(0) + " mm³";
+        } else if (percentual > 0) {
+            resultado.textContent = percentual + "%";
+        } else {
+            resultado.textContent = "";
+        }
+    });
+}
+
+
+// recalcula ao digitar total
+leucocitosTotaisInput.addEventListener("input", converterParaAbsoluto);
+
+// recalcula ao alterar percentuais
+document.addEventListener("input", function (e) {
+    if (e.target.classList.contains("celula")) {
+        converterParaAbsoluto();
+    }
+});
+
+
+
+function dataAtual() {
+    let Data = new Date();
+
+    let dia = String(Data.getDate()).padStart(2, '0');
+    let mes = String(Data.getMonth() + 1).padStart(2, '0');
+    let ano = Data.getFullYear();
+
+    return dia + "/" + mes + "/" + ano;
+}
+
+function apagar() { window.location.reload(); } 
+  </script>
+
+</body>
+</html>
