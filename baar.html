@@ -51,18 +51,20 @@ header img {
 
 header button {
   justify-self: center;
-  height: 40px;
-  width: 120px;
   border-radius: 6px;
   background-color: #EBEBEB;
   font-family: "Ruda", sans-serif;
 }
 
-#btnSalvar {
+#btnSalvar { 
+  height: 40px;
+  width: 100px;
   border-color:  #00FFF7;
 }
 
-#btnApagar {
+#btnApagar { 
+  height: 40px;
+  width: 100px;
   border-color: #F20039
 }
 
@@ -139,6 +141,11 @@ textarea[name="mensagemGrande"] {
     font-family: "Ruda", sans-serif;
 }
 
+
+
+
+
+
 /* aqui começa o código da impressão */
 
 .cabeca {
@@ -147,6 +154,9 @@ textarea[name="mensagemGrande"] {
   gap: 20px;
   padding: 0;
   margin: 0;
+  border-bottom: 2px solid #0d0d0d;
+  margin-bottom: 30px;
+ 
 }
 
 .cabeca-esq img {
@@ -171,11 +181,14 @@ textarea[name="mensagemGrande"] {
   font-weight: bold;
   font-size: 1.2rem;
   margin: 0; 
-  padding: 0;
+  padding: 8px;
+   border: 1px solid #0d0d0d;
+   border-radius: 5px; 
 }
 
 .for {
-  color: #00FFF7; /* para pintar apenas as 3 letras do nome forLaudos */
+  color: #00FFF7;
+   /* para pintar apenas as 3 letras do nome forLaudos */
 }
 
 #infoAnalise {
@@ -187,7 +200,7 @@ textarea[name="mensagemGrande"] {
  table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 200px;
   margin: 0;
 }
 
@@ -198,11 +211,8 @@ textarea[name="mensagemGrande"] {
 
     #tituloExameImpresso {
   text-align: left; 
-  border-radius: 5px; 
-  border: 1px solid #EBEBEB; 
-  background-color: #EBEBEB;  
-  padding: 8px;  
-  border: 1px solid #0d0d0d;
+  border-radius: 5px;
+  padding: 8px; 
 }
 
     th, td {
@@ -300,7 +310,6 @@ textarea[name="mensagemGrande"] {
       <option>Positivo ++</option>
       <option>Positivo +++</option>
       </datalist>
-
     </div>
 
 
@@ -326,11 +335,11 @@ textarea[name="mensagemGrande"] {
 </div>
   <table>  <!--tabela que vai receber as informações para gerar o PDF-->
     <caption>
-     <strong id="tituloExameImpresso">Microscopia de BAAR</strong>
+     <strong id="tituloExameImpresso">MICROSCOPIA DE BAAR</strong>
     </caption>
       <thead>
     <tr>
-      <th id="linhaUm"></th>
+      <th id="nome"><strong>Amostras Analisadas</strong></th>
       <th id="resultado">Resultado</th>
       <th id="vr1">Valor de Referência</th>
     </tr>
@@ -424,6 +433,3 @@ function apagar() { window.location.reload(); }
 
 </body>
 </html>
-
-
-
