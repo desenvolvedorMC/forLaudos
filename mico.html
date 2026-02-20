@@ -158,6 +158,8 @@ margin: auto;}
   gap: 20px;
   padding: 0;
   margin: 0;
+  border-bottom: 2px solid #0d0d0d;
+  margin-bottom: 30px;
 }
 
 .cabeca-esq img {
@@ -182,8 +184,10 @@ margin: auto;}
   font-weight: bold;
   font-size: 1.2rem;
   margin: 0; 
-  padding: 0;
-}
+  padding: 8px;
+   border: 1px solid #0d0d0d;
+   border-radius: 5px; 
+} 
 
 .for {
   color: #00FFF7; /* para pintar apenas as 3 letras do nome forLaudos */
@@ -209,11 +213,8 @@ margin: auto;}
 
     #tituloExameImpresso {
   text-align: left; 
-  border-radius: 5px; 
-  border: 1px solid #EBEBEB; 
-  background-color: #EBEBEB;  
-  padding: 8px;  
-  border: 1px solid #0d0d0d;
+  border-radius: 5px;
+  padding: 8px; 
 }
 
     th, td {
@@ -288,29 +289,53 @@ margin: auto;}
       <br><br>
       <fieldset class="amostra" data-numero="1">
   <legend></legend>
-<label><input type="checkbox" value="Ausente" data-amostra="1">Ausente</label>
-<label><input type="checkbox" value="Artroconídios dentro do pêlo, sugestivo Endotrix." data-amostra="1">Artroconídios dentro do pêlo, sugestivo Endotrix.</label>
-<label><input type="checkbox" value="Artroconídios fora do pêlo, sugestivo Ectotrix." data-amostra="1">Artroconídios fora do pêlo, sugestivo Ectotrix.</label>
-<label><input type="checkbox" value="Bastonetes, sugestivo Eritrasma." data-amostra="1">Bastonetes, sugestivo Eritrasma.</label>
-<label><input type="checkbox" value="Blastoconídios, sugestivo Cândida sp." data-amostra="1">Blastoconídios, sugestivo Cândida sp.</label>
-<label><input type="checkbox" value="Células leveduriformes." data-amostra="1">Células leveduriformes.</label>
-<label><input type="checkbox" value="Conídios hialinos cor creme, sugestivo Piedra branca." data-amostra="1">Conídios hialinos cor creme, sugestivo Piedra branca.</label>
-<label><input type="checkbox" value="Cryptocooccus neoformans" data-amostra="1">Cryptocooccus neoformans</label>
-<label><input type="checkbox" value="Demodex folliculorum" data-amostra="1">Demodex folliculorum</label>
-<label><input type="checkbox" value="Hifas demáceas septadas ramificadas, sugestivo Feohifomicose." data-amostra="1">Hifas demáceas septadas ramificadas, sugestivo Feohifomicose.</label>
-<label><input type="checkbox" value="Hifas hialinas cenocíticas, sugestivo Zigomiceto." data-amostra="1">Hifas hialinas cenocíticas, sugestivo Zigomiceto.</label>
-<label><input type="checkbox" value="Hifas hialinas septadas ramificadas, sugestivo Aspergillus sp." data-amostra="1">Hifas hialinas septadas ramificadas, sugestivo Aspergillus sp.</label>
-<label><input type="checkbox" value="Hifas hialinas septadas ramificadas, sugestivo Hialohifomicose." data-amostra="1">Hifas hialinas septadas ramificadas, sugestivo Hialohifomicose.</label>
-<label><input type="checkbox" value="Hifas septadas cor castanha, clamidoconídios intercalares, sugestivo Tinea nigra." data-amostra="1">Hifas septadas cor castanha, clamidoconídios intercalares, sugestivo Tinea nigra.</label>
-<label><input type="checkbox" value="Hifas septadas e artroconídios, sugestivo Dermatófitos." data-amostra="1">Hifas septadas e artroconídios, sugestivo Dermatófitos.</label>
-<label><input type="checkbox" value="Hifas sepetadas, ramificadas." data-amostra="1">Hifas sepetadas, ramificadas.</label>
-<label><input type="checkbox" value="Leveduras arredondadas germulares, sugestivo Paracoccidioides brasiliensis." data-amostra="1">Leveduras arredondadas germulares, sugestivo Paracoccidioides brasiliensis.</label>
-<label><input type="checkbox" value="Leveduras ovais, curtas e curvas, sugestivo Pitisíase versicolor." data-amostra="1">Leveduras ovais, curtas e curvas, sugestivo Pitisíase versicolor.</label>
-<label><input type="checkbox" value="Leveduras ovais e agrupadas, sugestivo Malassezia sp." data-amostra="1">Leveduras ovais e agrupadas, sugestivo Malassezia sp.</label>
-<label><input type="checkbox" value="Pseudo-hifas, sugestivo Cândida sp." data-amostra="1">Pseudo-hifas, sugestivo Cândida sp.</label>
-<label><input type="checkbox" value="Sarcoptes scabiei" data-amostra="1">Sarcoptes scabiei</label>
-<label><input type="checkbox" value="Outros" data-amostra="1">Outros</label>
+
+<label><input type="checkbox" value="Ausente" data-amostra="1">Ausente</label><br>
+
+<label><input type="checkbox" value="Artroconídios dentro do pêlo, sugestivo Endotrix." data-amostra="1">Artroconídios dentro do pêlo, sugestivo Endotrix.</label><br>
+
+<label><input type="checkbox" value="Artroconídios fora do pêlo, sugestivo Ectotrix." data-amostra="1">Artroconídios fora do pêlo, sugestivo Ectotrix.</label><br>
+
+<label><input type="checkbox" value="Bastonetes, sugestivo Eritrasma." data-amostra="1">Bastonetes, sugestivo Eritrasma.</label><br>
+
+<label><input type="checkbox" value="Blastoconídios, sugestivo Cândida sp." data-amostra="1">Blastoconídios, sugestivo Cândida sp.</label><br>
+
+<label><input type="checkbox" value="Células leveduriformes." data-amostra="1">Células leveduriformes.</label><br>
+
+<label><input type="checkbox" value="Conídios hialinos cor creme, sugestivo Piedra branca." data-amostra="1">Conídios hialinos cor creme, sugestivo Piedra branca.</label><br>
+
+<label><input type="checkbox" value="Cryptocooccus neoformans" data-amostra="1">Cryptocooccus neoformans</label><br>
+
+<label><input type="checkbox" value="Demodex folliculorum" data-amostra="1">Demodex folliculorum</label><br>
+
+<label><input type="checkbox" value="Hifas demáceas septadas ramificadas, sugestivo Feohifomicose." data-amostra="1">Hifas demáceas septadas ramificadas, sugestivo Feohifomicose.</label><br>
+
+<label><input type="checkbox" value="Hifas hialinas cenocíticas, sugestivo Zigomiceto." data-amostra="1">Hifas hialinas cenocíticas, sugestivo Zigomiceto.</label><br>
+
+<label><input type="checkbox" value="Hifas hialinas septadas ramificadas, sugestivo Aspergillus sp." data-amostra="1">Hifas hialinas septadas ramificadas, sugestivo Aspergillus sp.</label><br>
+
+<label><input type="checkbox" value="Hifas hialinas septadas ramificadas, sugestivo Hialohifomicose." data-amostra="1">Hifas hialinas septadas ramificadas, sugestivo Hialohifomicose.</label><br>
+
+<label><input type="checkbox" value="Hifas septadas cor castanha, clamidoconídios intercalares, sugestivo Tinea nigra." data-amostra="1">Hifas septadas cor castanha, clamidoconídios intercalares, sugestivo Tinea nigra.</label><br>
+
+<label><input type="checkbox" value="Hifas septadas e artroconídios, sugestivo Dermatófitos." data-amostra="1">Hifas septadas e artroconídios, sugestivo Dermatófitos.</label><br>
+
+<label><input type="checkbox" value="Hifas sepetadas, ramificadas." data-amostra="1">Hifas sepetadas, ramificadas.</label><br>
+
+<label><input type="checkbox" value="Leveduras arredondadas germulares, sugestivo Paracoccidioides brasiliensis." data-amostra="1">Leveduras arredondadas germulares, sugestivo Paracoccidioides brasiliensis.</label><br>
+
+<label><input type="checkbox" value="Leveduras ovais, curtas e curvas, sugestivo Pitisíase versicolor." data-amostra="1">Leveduras ovais, curtas e curvas, sugestivo Pitisíase versicolor.</label><br>
+
+<label><input type="checkbox" value="Leveduras ovais e agrupadas, sugestivo Malassezia sp." data-amostra="1">Leveduras ovais e agrupadas, sugestivo Malassezia sp.</label><br>
+
+<label><input type="checkbox" value="Pseudo-hifas, sugestivo Cândida sp." data-amostra="1">Pseudo-hifas, sugestivo Cândida sp.</label><br>
+
+<label><input type="checkbox" value="Sarcoptes scabiei" data-amostra="1">Sarcoptes scabiei</label><br>
+
+<label><input type="checkbox" value="Outros" data-amostra="1">Outros</label><br>
+
 </fieldset>
+
     </div>
 
 
@@ -336,7 +361,7 @@ margin: auto;}
 </div>
   <table>  <!--tabela que vai receber as informações para gerar o PDF-->
     <caption>
-     <strong id="tituloExameImpresso">Micológico Direto</strong>
+     <strong id="tituloExameImpresso">MICOLÓGICO DIRETO</strong>
     </caption>
       <thead>
     <tr>
