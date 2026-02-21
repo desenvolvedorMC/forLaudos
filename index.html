@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>forLaudos</title>
-  <link rel="shortcut icon" href="iconeSEMBG.png" type="image/x-icon">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
 </head>
 
 <body>
@@ -42,12 +42,27 @@
       font-size: small;}
 
   header img {
-  height: 100px;
-  width: 100px;
+  
   object-fit: contain;
   border-radius: 12px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
     }
+
+    #logo {
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #00FFF7;
+    }
+
+#anatomo {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #ff0000; }
+#leucograma {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #8c00ff; }
+#urina {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #eeff00; }
+#gram {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #ff00dd; }
+#baar {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #ff0077; }
+#mico {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #ffa600; }
+#esperma {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #00ff73; }
+#parasito {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #a55000; }
+
+
+
 
     .menu-toggle {
       display: none;
@@ -169,6 +184,10 @@
      body img { box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
       border-radius: 12px;} 
 
+
+
+
+
     footer {
       text-align: center;
       padding: 10px;
@@ -188,7 +207,7 @@
 
   <header>
   <a href="https://wa.me/?text=https://desenvolvedormc.github.io/forLaudos/" target="_blank">
-  <img src="iconeSEMBG.png" height="100px" width="100px" alt="ícone"></a> <!--quando clicar no logo aparece para compartilhar pelo whatsApp-->
+  <img src="logo.png" height="100px" width="100px" alt="ícone" id="logo"></a> <!--quando clicar no logo aparece para compartilhar pelo whatsApp-->
   <div class="menu-toggle" onclick="toggleMenu()">
     <div></div>
     <div></div>
@@ -208,42 +227,42 @@
     <a href="anatomo.html" style="text-decoration: none;">
     <div class="card">
       <h2>Anatomopatológico</h2>
-  <img src="coracao.png" height="100px" width="100px" alt="anatomopatológico">
+  <img src="anatomo.png" height="100px" width="100px" alt="anatomopatológico" id="anatomo">
     </div>
     </a>
 
     <a href="leucograma.html" style="text-decoration: none;">
     <div class="card">
       <h2>Leucograma</h2>
-  <img src="gbranco.png" height="100px" width="100px" alt="leucograma">
+  <img src="leucograma.png" height="100px" width="100px" alt="leucograma" id="leucograma">
     </div>
     </a>
 
 <a href="urina.html" style="text-decoration: none;">
     <div class="card">
       <h2>Urina Tipo 1</h2>
-  <img src="urina.png" height="100px" width="100px" alt="urina">
+  <img src="urina.png" height="100px" width="100px" alt="urina" id="urina">
     </div>
     </a>
 
     <a href="gram.html" style="text-decoration: none;">
     <div class="card" >
       <h2>Microscopia de GRAM</h2>
-<img src="bacterias.png" height="100px" width="100px" alt="bactérias">
+<img src="gram.png" height="100px" width="100px" alt="bactérias" id="gram">
     </div>
     </a>
     
     <a href="baar.html" style="text-decoration: none;">
     <div class="card">
       <h2>Microscopia de BAAR</h2>
-  <img src="mycobac.png" height="100px" width="100px" alt="mycobactérias">
+  <img src="baar.png" height="100px" width="100px" alt="mycobactérias" id="baar">
     </div>
     </a>
 
     <a href="mico.html" style="text-decoration: none;">
     <div class="card">
       <h2>Micológico Direto</h2>
-<img src="fungos.png" height="100px" width="100px" alt="fungos">
+<img src="mico.png" height="100px" width="100px" alt="fungos" id="mico">
     </div>
     </a>
 
@@ -251,14 +270,14 @@
     <a href="esperma.html" style="text-decoration: none;">
     <div class="card">
       <h2>Espermograma</h2>
-<img src="esperma.png" height="100px" width="100px" alt="esperma">
+<img src="esperma.png" height="100px" width="100px" alt="esperma" id="esperma">
     </div>
     </a>
 
     <a href="parasito.html" style="text-decoration: none;">
     <div class="card">
       <h2>Parasitológico</h2>
-  <img src="fezes.png" height="100px" width="100px" alt="fezes">
+  <img src="parasito.png" height="100px" width="100px" alt="fezes" id="parasito">
     </div>
     </a>
 
