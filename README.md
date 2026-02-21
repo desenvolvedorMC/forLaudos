@@ -8,8 +8,12 @@ CORES para o forLaudos:
 #5e6e6e7e cinza transparente
 FONTE: RUDA
 
-SOBRE NÓS:
-A plataforma forLaudos visa,
-transformar a experiência das aulas práticas em Análises Clínicas por meio de tecnologia educacional, 
-fornecendo formulários digitais inteligentes que simplificam processos, 
-aumentam a produtividade e contribuem para a formação técnica de futuros profissionais da saúde.
+Cinza CLARO metálico  (microscópio)
+#CFCFD4
+RGB: 207, 207, 212
+Cinza MEDIO metálico (microscópio)
+#9FA3AA
+RGB: 159, 163, 170
+Azul ESCURO acinzentado (fundo microscópio))
+#1F2733
+RGB: 31, 39, 51
