@@ -52,15 +52,60 @@
       box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #00FFF7;
     }
 
-#anatomo {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #ff0000; }
-#leucograma {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #8c00ff; }
-#urina {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #eeff00; }
-#gram {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #ff00dd; }
-#baar {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #ff0077; }
-#mico {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #ffa600; }
-#esperma {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #00ff73; }
-#parasito {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #a55000; }
+/*espaço da sigla dentro do card*/
+.sigla {
+  font-family: "Ruda", sans-serif;
+  background-color:#ffffff;
+  width: 125px;
+  height: 125px;
+  border-radius: 12px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent; /* esse item e para declarar que tem borda, e depois eu conseguir adicionar nos ids abaixo separadamente */
+}
 
+/*estilização da sigla dentro do espaçoCard*/
+h3 {
+      font-size: 3rem;
+      padding: 10px;
+      margin: 10px;
+      margin-bottom: 6px;
+      margin-top: 44px;
+      text-align: center;
+      color: #000000;
+      font-family: "Ruda", sans-serif; }
+
+    
+
+
+#anatomo.sigla {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #ff0000; border-color: #ff0000;}
+#anatomo h3 {  color: #ff0000;}
+
+#leucograma.sigla {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #8c00ff; border-color: #8c00ff; }
+#leucograma h3 {  color: #8c00ff;}
+
+#urina.sigla {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #eeff00; border-color: #eeff00;}
+#urina h3 {  color: #eeff00;}
+
+#gram.sigla {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #a3008d; border-color: #a3008d;}
+#gram h3 {  color: #a3008d; }
+
+#baar.sigla {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #ff0080; border-color: #ff0080; }
+#baar h3 {  color: #ff0080; }
+
+#mico.sigla {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #ffa600; border-color: #ffa600; }
+#mico h3 {  color: #ffa600; }
+
+#esperma.sigla {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #00ff73; border-color: #00ff73; }
+#esperma h3 {  color: #00ff73; }
+
+#parasito.sigla {  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3), 0px 0px 10px #a55000; border-color: #a55000;}
+#parasito h3 {  color: #a55000; }
 
 
 
@@ -160,7 +205,7 @@
       position: absolute;
       width: 30%;
       height: 8px;
-      background-color: #00FFF7;
+      background-color: #5e6e6e7e;
       top: 0;
       right: 0;
       border-top-left-radius: 0px;
@@ -227,42 +272,42 @@
     <a href="anatomo.html" style="text-decoration: none;">
     <div class="card">
       <h2>Anatomopatológico</h2>
-  <img src="anatomo.png" height="100px" width="100px" alt="anatomopatológico" id="anatomo">
+  <div class="sigla" id="anatomo"><h3>APO</h3></div>
     </div>
     </a>
 
     <a href="leucograma.html" style="text-decoration: none;">
     <div class="card">
       <h2>Leucograma</h2>
-  <img src="leucograma.png" height="100px" width="100px" alt="leucograma" id="leucograma">
+ <div class="sigla" id="leucograma"><h3>LEU</h3></div>
     </div>
     </a>
 
 <a href="urina.html" style="text-decoration: none;">
     <div class="card">
       <h2>Urina Tipo 1</h2>
-  <img src="urina.png" height="100px" width="100px" alt="urina" id="urina">
+  <div class="sigla" id="urina"><h3>UR1</h3></div>
     </div>
     </a>
 
     <a href="gram.html" style="text-decoration: none;">
     <div class="card" >
       <h2>Microscopia de GRAM</h2>
-<img src="gram.png" height="100px" width="100px" alt="bactérias" id="gram">
+<div class="sigla" id="gram"><h3>GRM</h3></div>
     </div>
     </a>
     
     <a href="baar.html" style="text-decoration: none;">
     <div class="card">
       <h2>Microscopia de BAAR</h2>
-  <img src="baar.png" height="100px" width="100px" alt="mycobactérias" id="baar">
+  <div class="sigla" id="baar"><h3>BAR</h3></div>
     </div>
     </a>
 
     <a href="mico.html" style="text-decoration: none;">
     <div class="card">
       <h2>Micológico Direto</h2>
-<img src="mico.png" height="100px" width="100px" alt="fungos" id="mico">
+<div class="sigla" id="mico"><h3>MID</h3></div>
     </div>
     </a>
 
@@ -270,14 +315,14 @@
     <a href="esperma.html" style="text-decoration: none;">
     <div class="card">
       <h2>Espermograma</h2>
-<img src="esperma.png" height="100px" width="100px" alt="esperma" id="esperma">
+<div class="sigla" id="esperma"><h3>ESP</h3></div>
     </div>
     </a>
 
     <a href="parasito.html" style="text-decoration: none;">
     <div class="card">
       <h2>Parasitológico</h2>
-  <img src="parasito.png" height="100px" width="100px" alt="fezes" id="parasito">
+  <div class="sigla" id="parasito"><h3>PAR</h3></div>
     </div>
     </a>
 
